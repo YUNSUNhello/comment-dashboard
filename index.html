@@ -1,0 +1,1691 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>评论运营数据看板</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0f1724;
+            --bg-secondary: #1a2332;
+            --bg-card: #1e2a3a;
+            --bg-card-hover: #243447;
+            --border-color: #2a3a4e;
+            --text-primary: #e8edf3;
+            --text-secondary: #8b9db5;
+            --text-muted: #5a6d85;
+            --accent-blue: #4a9eff;
+            --accent-cyan: #00d4aa;
+            --accent-orange: #ff8c42;
+            --accent-pink: #ff6b9d;
+            --accent-purple: #a78bfa;
+            --accent-yellow: #fbbf24;
+            --gradient-blue: linear-gradient(135deg, #4a9eff, #00d4aa);
+            --gradient-orange: linear-gradient(135deg, #ff8c42, #ff6b9d);
+            --gradient-purple: linear-gradient(135deg, #a78bfa, #4a9eff);
+            --shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        .header {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(20px);
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-blue);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .header-title {
+            font-size: 22px;
+            font-weight: 700;
+            background: var(--gradient-blue);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header-subtitle {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .refresh-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 8px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.3s;
+        }
+
+        .refresh-btn:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--accent-blue);
+        }
+
+        .data-source-btn {
+            background: var(--gradient-blue);
+            border: none;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .data-source-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 15px rgba(74,158,255,0.3);
+        }
+
+        .update-time {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* Main Container */
+        .main-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 24px 40px;
+        }
+
+        /* KPI Cards */
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .kpi-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 20px 24px;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .kpi-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            border-radius: 14px 14px 0 0;
+        }
+
+        .kpi-card:nth-child(1)::before { background: var(--gradient-blue); }
+        .kpi-card:nth-child(2)::before { background: var(--gradient-orange); }
+        .kpi-card:nth-child(3)::before { background: var(--gradient-purple); }
+        .kpi-card:nth-child(4)::before { background: var(--accent-cyan); }
+        .kpi-card:nth-child(5)::before { background: var(--accent-yellow); }
+        .kpi-card:nth-child(6)::before { background: var(--accent-pink); }
+
+        .kpi-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+            border-color: rgba(74,158,255,0.3);
+        }
+
+        .kpi-label {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .kpi-value {
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .kpi-card:nth-child(1) .kpi-value { color: var(--accent-blue); }
+        .kpi-card:nth-child(2) .kpi-value { color: var(--accent-orange); }
+        .kpi-card:nth-child(3) .kpi-value { color: var(--accent-purple); }
+        .kpi-card:nth-child(4) .kpi-value { color: var(--accent-cyan); }
+        .kpi-card:nth-child(5) .kpi-value { color: var(--accent-yellow); }
+        .kpi-card:nth-child(6) .kpi-value { color: var(--accent-pink); }
+
+        .kpi-change {
+            font-size: 12px;
+            margin-top: 8px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .kpi-change.up { color: var(--accent-cyan); }
+        .kpi-change.down { color: var(--accent-pink); }
+        .kpi-change.neutral { color: var(--text-muted); }
+
+        /* Section */
+        .section {
+            margin-bottom: 24px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: 17px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-title .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent-blue);
+        }
+
+        .filter-tabs {
+            display: flex;
+            gap: 4px;
+            background: var(--bg-secondary);
+            border-radius: 8px;
+            padding: 3px;
+        }
+
+        .filter-tab {
+            padding: 6px 16px;
+            border-radius: 6px;
+            font-size: 13px;
+            cursor: pointer;
+            border: none;
+            background: transparent;
+            color: var(--text-secondary);
+            transition: all 0.3s;
+        }
+
+        .filter-tab.active {
+            background: var(--accent-blue);
+            color: white;
+        }
+
+        .filter-tab:hover:not(.active) {
+            color: var(--text-primary);
+        }
+
+        /* Chart Cards */
+        .chart-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .chart-grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .chart-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 20px;
+            transition: all 0.3s;
+        }
+
+        .chart-card:hover {
+            border-color: rgba(74,158,255,0.2);
+        }
+
+        .chart-card.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .chart-title {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .chart-title .icon {
+            font-size: 16px;
+        }
+
+        .chart-container {
+            width: 100%;
+            height: 320px;
+        }
+
+        .chart-container-sm {
+            width: 100%;
+            height: 260px;
+        }
+
+        /* Data Table */
+        .table-wrapper {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            overflow: hidden;
+        }
+
+        .table-header-bar {
+            padding: 16px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .table-title {
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .data-table thead th {
+            background: var(--bg-secondary);
+            padding: 12px 16px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-align: left;
+            white-space: nowrap;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .data-table tbody td {
+            padding: 12px 16px;
+            font-size: 13px;
+            border-bottom: 1px solid rgba(42,58,78,0.5);
+            white-space: nowrap;
+        }
+
+        .data-table tbody tr:hover {
+            background: var(--bg-card-hover);
+        }
+
+        .data-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .badge-blue { background: rgba(74,158,255,0.15); color: var(--accent-blue); }
+        .badge-cyan { background: rgba(0,212,170,0.15); color: var(--accent-cyan); }
+        .badge-orange { background: rgba(255,140,66,0.15); color: var(--accent-orange); }
+
+        .num-up { color: var(--accent-cyan); }
+        .num-down { color: var(--accent-pink); }
+        .num-highlight { color: var(--accent-blue); font-weight: 600; }
+
+        /* Analysis Cards */
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .analysis-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 20px;
+        }
+
+        .analysis-title {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .analysis-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(42,58,78,0.3);
+        }
+
+        .analysis-item:last-child {
+            border-bottom: none;
+        }
+
+        .analysis-item-label {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .analysis-item-value {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .progress-bar {
+            width: 100px;
+            height: 6px;
+            background: rgba(42,58,78,0.5);
+            border-radius: 3px;
+            overflow: hidden;
+            margin-left: 12px;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            border-radius: 3px;
+            transition: width 1s ease;
+        }
+
+        /* Modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.6);
+            z-index: 200;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 32px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+
+        .modal-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .modal textarea {
+            width: 100%;
+            height: 200px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 12px;
+            color: var(--text-primary);
+            font-size: 13px;
+            font-family: monospace;
+            resize: vertical;
+            margin-bottom: 16px;
+        }
+
+        .modal textarea:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+        }
+
+        .modal-hint {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            line-height: 1.6;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+        }
+
+        .modal-btn {
+            padding: 8px 24px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .modal-btn-primary {
+            background: var(--accent-blue);
+            color: white;
+        }
+
+        .modal-btn-primary:hover {
+            background: #3a8eef;
+        }
+
+        .modal-btn-secondary {
+            background: var(--bg-secondary);
+            color: var(--text-secondary);
+            border: 1px solid var(--border-color);
+        }
+
+        .modal-btn-secondary:hover {
+            background: var(--bg-card-hover);
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-muted);
+        }
+
+        .empty-state-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .empty-state-text {
+            font-size: 15px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .kpi-card, .chart-card, .table-wrapper, .analysis-card {
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        .kpi-card:nth-child(1) { animation-delay: 0.05s; }
+        .kpi-card:nth-child(2) { animation-delay: 0.1s; }
+        .kpi-card:nth-child(3) { animation-delay: 0.15s; }
+        .kpi-card:nth-child(4) { animation-delay: 0.2s; }
+        .kpi-card:nth-child(5) { animation-delay: 0.25s; }
+        .kpi-card:nth-child(6) { animation-delay: 0.3s; }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: var(--bg-primary); }
+        ::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+        /* Person/Account Selector */
+        .person-selector {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+
+        .person-chip {
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            cursor: pointer;
+            border: 1px solid var(--border-color);
+            background: var(--bg-secondary);
+            color: var(--text-secondary);
+            transition: all 0.3s;
+        }
+
+        .person-chip.active {
+            background: rgba(74,158,255,0.15);
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
+        }
+
+        .person-chip:hover:not(.active) {
+            border-color: var(--text-muted);
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .chart-grid { grid-template-columns: 1fr; }
+            .analysis-grid { grid-template-columns: 1fr; }
+            .chart-grid-3 { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .header { padding: 16px 20px; }
+            .main-container { padding: 16px 20px; }
+            .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+    <div class="header-left">
+        <div class="logo">📊</div>
+        <div>
+            <div class="header-title">评论运营数据看板</div>
+            <div class="header-subtitle">评论运营工作量提报 · 实时数据分析</div>
+        </div>
+    </div>
+    <div class="header-right">
+        <span class="update-time" id="updateTime">--</span>
+        <span class="update-time" id="dataSourceStatus" style="color:var(--accent-cyan);">● 自动更新</span>
+        <button class="data-source-btn" onclick="openDataModal()">📥 导入数据</button>
+        <button class="refresh-btn" onclick="manualRefresh()">🔄 刷新</button>
+    </div>
+</div>
+
+<!-- Main -->
+<div class="main-container">
+
+    <!-- KPI Overview -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-title"><span class="dot"></span> 今日概览</div>
+            <div class="filter-tabs">
+                <button class="filter-tab active" onclick="setPeriod('today', this)">今日</button>
+                <button class="filter-tab" onclick="setPeriod('7d', this)">近7天</button>
+                <button class="filter-tab" onclick="setPeriod('all', this)">全部</button>
+            </div>
+        </div>
+        <div class="kpi-grid" id="kpiGrid">
+            <!-- Dynamic KPI Cards -->
+        </div>
+    </div>
+
+    <!-- Person & Account Filter -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-title"><span class="dot" style="background:var(--accent-cyan)"></span> 人员与账号筛选</div>
+        </div>
+        <div class="person-selector" id="personSelector">
+            <!-- Dynamic chips -->
+        </div>
+        <div class="person-selector" id="accountSelector">
+            <!-- Dynamic chips -->
+        </div>
+    </div>
+
+    <!-- Charts Row 1 -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-title"><span class="dot" style="background:var(--accent-orange)"></span> 趋势分析</div>
+        </div>
+        <div class="chart-grid">
+            <div class="chart-card">
+                <div class="chart-title"><span class="icon">📈</span> 各维度每日趋势</div>
+                <div class="chart-container" id="trendChart"></div>
+            </div>
+            <div class="chart-card">
+                <div class="chart-title"><span class="icon">📊</span> 每日新增发评量趋势</div>
+                <div class="chart-container" id="newCommentChart"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Charts Row 2 -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-title"><span class="dot" style="background:var(--accent-purple)"></span> 人员表现分析</div>
+        </div>
+        <div class="chart-grid">
+            <div class="chart-card">
+                <div class="chart-title"><span class="icon">👥</span> 人员维度对比</div>
+                <div class="chart-container" id="personCompareChart"></div>
+            </div>
+            <div class="chart-card">
+                <div class="chart-title"><span class="icon">🏆</span> 人员累计贡献排行</div>
+                <div class="chart-container" id="personRankChart"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Charts Row 3 -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-title"><span class="dot" style="background:var(--accent-yellow)"></span> 账号表现分析</div>
+        </div>
+        <div class="chart-grid">
+            <div class="chart-card">
+                <div class="chart-title"><span class="icon">🏷️</span> 各账号运营数据对比</div>
+                <div class="chart-container" id="accountCompareChart"></div>
+            </div>
+            <div class="chart-card">
+                <div class="chart-title"><span class="icon">💡</span> 账号新增粉丝/获赞趋势</div>
+                <div class="chart-container" id="accountGrowthChart"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Near 7 Days Summary -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-title"><span class="dot" style="background:var(--accent-pink)"></span> 近七天数据汇总</div>
+        </div>
+        <div class="chart-grid">
+            <div class="chart-card full-width">
+                <div class="chart-title"><span class="icon">📅</span> 近七天各维度每日数据</div>
+                <div class="chart-container" id="weeklySummaryChart"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Analysis Cards -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-title"><span class="dot" style="background:var(--accent-cyan)"></span> 数据分析与洞察</div>
+        </div>
+        <div class="analysis-grid" id="analysisGrid">
+            <!-- Dynamic analysis -->
+        </div>
+    </div>
+
+    <!-- Detail Table -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-title"><span class="dot" style="background:var(--accent-yellow)"></span> 明细数据表</div>
+        </div>
+        <div class="table-wrapper">
+            <div class="table-header-bar">
+                <div class="table-title">全部记录（含计算字段）</div>
+            </div>
+            <div style="overflow-x: auto;">
+                <table class="data-table" id="detailTable">
+                    <thead>
+                        <tr>
+                            <th>日期</th>
+                            <th>填写人</th>
+                            <th>部门</th>
+                            <th>运营账号</th>
+                            <th>运营文章量</th>
+                            <th>累计发评量</th>
+                            <th>新增发评量</th>
+                            <th>跟评量</th>
+                            <th>累计获赞量</th>
+                            <th>新增获赞量</th>
+                            <th>累计粉丝量</th>
+                            <th>新增粉丝量</th>
+                            <th>数据归因</th>
+                        </tr>
+                    </thead>
+                    <tbody id="detailTableBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Data Import Modal -->
+<div class="modal-overlay" id="dataModal">
+    <div class="modal">
+        <div class="modal-title">📥 导入数据</div>
+        <div class="modal-hint">
+            请从腾讯文档中复制全部数据（Ctrl+A 全选 → Ctrl+C 复制），然后粘贴到下方文本框中。<br>
+            支持从腾讯文档直接粘贴制表符分隔的表格数据。
+        </div>
+        <textarea id="dataInput" placeholder="在此粘贴从腾讯文档复制的表格数据...&#10;&#10;填写人&#9;部门&#9;日期&#9;运营账号&#9;..."></textarea>
+        <div class="modal-actions">
+            <button class="modal-btn modal-btn-secondary" onclick="closeDataModal()">取消</button>
+            <button class="modal-btn modal-btn-primary" onclick="importData()">导入并分析</button>
+        </div>
+    </div>
+</div>
+
+<script>
+// ==================== Global State ====================
+let rawData = [];
+let processedData = [];
+let currentPeriod = 'today';
+let selectedPersons = new Set();
+let selectedAccounts = new Set();
+
+// ==================== Data Structure ====================
+const FIELDS = {
+    FILLER: 0,       // 填写人
+    DEPT: 1,         // 部门
+    FILL_TIME: 2,    // 填写时间
+    USER_TYPE: 3,    // 用户类型
+    PROJECT: 4,      // 负责项目
+    ACCOUNT_NEWS: 5, // 运营账号-新闻垂类
+    ACCOUNT_COMM: 6, // 运营账号-新闻网评员
+    ACCOUNT_WS: 7,   // 运营账号-微视
+    ARTICLE_COUNT: 8,// 运营文章量
+    CUM_COMMENT: 9,  // 累计发评量
+    FOLLOW_COMMENT: 10, // 跟评量
+    CUM_LIKE: 11,    // 累计获赞量
+    CUM_FAN: 12,     // 累计粉丝量
+    ATTRIBUTION: 13, // 数据归因
+    DATE: 14         // 日期
+};
+
+// ==================== Sample Data (from WeDoc) ====================
+const SAMPLE_DATA = `填写人（自动）	所在部门（自动）	填写时间（自动）	用户类型（自动）	负责项目（必填）	运营账号-新闻垂类（必填）	运营账号-新闻网评员（必填）	运营账号-微视（必填）	运营文章量（必填）	累计发评量（必填）	跟评量（必填）	累计获赞量（必填）	累计粉丝量（必填）	数据归因（必填）	日期（必填）
+yunsun(孙子渊)	Q5组	2026/04/03 13:53:19	企业微信用户	新闻-垂类运营	隐藏战线-蜗牛小姐			163	5154	120	211791	229	无	2026年04月01日
+yunsun(孙子渊)	Q5组	2026/04/03 13:54:52	企业微信用户	新闻-垂类运营	隐藏战线-蜗牛小姐			154	5222	108	213891	232	1	2026年04月02日`;
+
+// ==================== Data Parsing ====================
+function parseData(text) {
+    const lines = text.trim().split('\n');
+    if (lines.length < 2) return [];
+
+    const rows = [];
+    for (let i = 1; i < lines.length; i++) {
+        const cols = lines[i].split('\t');
+        if (cols.length < 15) continue;
+
+        // Clean data
+        const filler = cols[FIELDS.FILLER].trim();
+        const dept = cols[FIELDS.DEPT].trim();
+        const dateStr = cols[FIELDS.DATE].trim().replace('年', '-').replace('月', '-').replace('日', '');
+        const articleCount = parseInt(cols[FIELDS.ARTICLE_COUNT]) || 0;
+        const cumComment = parseInt(cols[FIELDS.CUM_COMMENT]) || 0;
+        const followComment = parseInt(cols[FIELDS.FOLLOW_COMMENT]) || 0;
+        const cumLike = parseInt(cols[FIELDS.CUM_LIKE]) || 0;
+        const cumFan = parseInt(cols[FIELDS.CUM_FAN]) || 0;
+        const attribution = cols[FIELDS.ATTRIBUTION].trim();
+        const project = cols[FIELDS.PROJECT].trim();
+
+        // Collect all accounts
+        const accounts = [];
+        if (cols[FIELDS.ACCOUNT_NEWS].trim()) accounts.push(cols[FIELDS.ACCOUNT_NEWS].trim());
+        if (cols[FIELDS.ACCOUNT_COMM].trim()) accounts.push(cols[FIELDS.ACCOUNT_COMM].trim());
+        if (cols[FIELDS.ACCOUNT_WS].trim()) accounts.push(cols[FIELDS.ACCOUNT_WS].trim());
+
+        if (!filler || !dateStr) continue;
+
+        rows.push({
+            filler, dept, dateStr, articleCount, cumComment,
+            followComment, cumLike, cumFan, attribution, project,
+            accounts: accounts.length > 0 ? accounts : ['未指定'],
+            fillTime: cols[FIELDS.FILL_TIME].trim()
+        });
+    }
+
+    // Sort by date
+    rows.sort((a, b) => a.dateStr.localeCompare(b.dateStr));
+
+    // Calculate daily increments
+    for (let i = 0; i < rows.length; i++) {
+        const row = rows[i];
+        // Find previous day's data for same person + account combination
+        const prevRow = findPreviousRow(rows, i);
+        if (prevRow) {
+            row.newComment = Math.max(0, row.cumComment - prevRow.cumComment);
+            row.newLike = Math.max(0, row.cumLike - prevRow.cumLike);
+            row.newFan = Math.max(0, row.cumFan - prevRow.cumFan);
+        } else {
+            // First record: treat cumulative as new
+            row.newComment = row.cumComment;
+            row.newLike = row.cumLike;
+            row.newFan = row.cumFan;
+        }
+    }
+
+    return rows;
+}
+
+function findPreviousRow(rows, currentIndex) {
+    const current = rows[currentIndex];
+    // Find the most recent row for the same person before current date
+    for (let i = currentIndex - 1; i >= 0; i--) {
+        if (rows[i].filler === current.filler) {
+            // Check if any account overlaps
+            const hasOverlap = rows[i].accounts.some(a => current.accounts.includes(a));
+            if (hasOverlap || rows[i].dateStr === getDateBefore(current.dateStr, 1)) {
+                return rows[i];
+            }
+        }
+    }
+    return null;
+}
+
+function getDateBefore(dateStr, days) {
+    const d = new Date(dateStr);
+    d.setDate(d.getDate() - days);
+    return d.toISOString().split('T')[0];
+}
+
+// ==================== Data Processing ====================
+function processData() {
+    if (processedData.length === 0) return;
+
+    // Update time
+    document.getElementById('updateTime').textContent = '更新于 ' + new Date().toLocaleString('zh-CN');
+    document.getElementById('dataSourceStatus').textContent = `● ${processedData.length} 条记录`;
+
+    // Build selectors
+    buildSelectors();
+
+    // Update KPIs
+    updateKPIs();
+
+    // Render charts
+    renderAllCharts();
+
+    // Render analysis
+    renderAnalysis();
+
+    // Render table
+    renderTable();
+}
+
+async function manualRefresh() {
+    const loaded = await loadFromDataJson();
+    if (loaded) {
+        processData();
+        document.getElementById('dataSourceStatus').textContent = `● ${processedData.length} 条记录 (已刷新)`;
+    } else {
+        location.reload();
+    }
+}
+
+function buildSelectors() {
+    const persons = [...new Set(processedData.map(r => r.filler))];
+    const accounts = [...new Set(processedData.flatMap(r => r.accounts))];
+
+    selectedPersons = new Set(persons);
+    selectedAccounts = new Set(accounts);
+
+    const personContainer = document.getElementById('personSelector');
+    personContainer.innerHTML = '<span style="font-size:13px;color:var(--text-muted);line-height:32px;margin-right:4px;">👤 人员：</span>' +
+        persons.map(p => `<div class="person-chip active" data-type="person" data-value="${p}" onclick="toggleFilter(this)">${p}</div>`).join('');
+
+    const accountContainer = document.getElementById('accountSelector');
+    accountContainer.innerHTML = '<span style="font-size:13px;color:var(--text-muted);line-height:32px;margin-right:4px;">🏷️ 账号：</span>' +
+        accounts.map(a => `<div class="person-chip active" data-type="account" data-value="${a}" onclick="toggleFilter(this)">${a}</div>`).join('');
+}
+
+function toggleFilter(el) {
+    const type = el.dataset.type;
+    const value = el.dataset.value;
+    const set = type === 'person' ? selectedPersons : selectedAccounts;
+
+    if (el.classList.contains('active')) {
+        set.delete(value);
+        el.classList.remove('active');
+    } else {
+        set.add(value);
+        el.classList.add('active');
+    }
+
+    processData();
+}
+
+function getFilteredData() {
+    return processedData.filter(r =>
+        selectedPersons.has(r.filler) && r.accounts.some(a => selectedAccounts.has(a))
+    );
+}
+
+function getFilteredByPeriod(data) {
+    if (currentPeriod === 'all') return data;
+    const now = new Date();
+    const days = currentPeriod === 'today' ? 1 : 7;
+    const cutoff = new Date(now);
+    cutoff.setDate(cutoff.getDate() - days);
+    const cutoffStr = cutoff.toISOString().split('T')[0];
+    return data.filter(r => r.dateStr >= cutoffStr);
+}
+
+// ==================== KPI Cards ====================
+function updateKPIs() {
+    const filtered = getFilteredByPeriod(getFilteredData());
+    const grid = document.getElementById('kpiGrid');
+
+    if (filtered.length === 0) {
+        grid.innerHTML = '<div class="empty-state"><div class="empty-state-icon">📭</div><div class="empty-state-text">暂无数据，请先导入</div></div>';
+        return;
+    }
+
+    const totalArticle = filtered.reduce((s, r) => s + r.articleCount, 0);
+    const totalNewComment = filtered.reduce((s, r) => s + (r.newComment || 0), 0);
+    const totalFollowComment = filtered.reduce((s, r) => s + r.followComment, 0);
+    const totalNewLike = filtered.reduce((s, r) => s + (r.newLike || 0), 0);
+    const totalNewFan = filtered.reduce((s, r) => s + (r.newFan || 0), 0);
+    const latestCumComment = filtered[filtered.length - 1]?.cumComment || 0;
+
+    // Calculate changes
+    const periodLabel = currentPeriod === 'today' ? '今日' : currentPeriod === '7d' ? '近7天' : '累计';
+
+    const kpis = [
+        { label: `${periodLabel}运营文章量`, value: totalArticle, icon: '📝', change: null },
+        { label: `${periodLabel}新增发评量`, value: totalNewComment, icon: '💬', change: null },
+        { label: `${periodLabel}跟评量`, value: totalFollowComment, icon: '🔁', change: null },
+        { label: `${periodLabel}新增获赞量`, value: totalNewLike, icon: '👍', change: null },
+        { label: `${periodLabel}新增粉丝量`, value: totalNewFan, icon: '🌟', change: null },
+        { label: '最新累计发评量', value: latestCumComment, icon: '📊', change: null }
+    ];
+
+    grid.innerHTML = kpis.map(kpi => `
+        <div class="kpi-card">
+            <div class="kpi-label">${kpi.icon} ${kpi.label}</div>
+            <div class="kpi-value">${kpi.value.toLocaleString()}</div>
+            <div class="kpi-change neutral">共 ${filtered.length} 条记录</div>
+        </div>
+    `).join('');
+}
+
+// ==================== Charts ====================
+const chartInstances = {};
+
+function initChart(id) {
+    const dom = document.getElementById(id);
+    if (!dom) return null;
+    if (chartInstances[id]) {
+        chartInstances[id].dispose();
+    }
+    const chart = echarts.init(dom, 'dark');
+    chartInstances[id] = chart;
+    return chart;
+}
+
+function renderAllCharts() {
+    renderTrendChart();
+    renderNewCommentChart();
+    renderPersonCompareChart();
+    renderPersonRankChart();
+    renderAccountCompareChart();
+    renderAccountGrowthChart();
+    renderWeeklySummaryChart();
+}
+
+function getChartTheme() {
+    return {
+        textStyle: { color: '#8b9db5', fontFamily: 'Noto Sans SC' },
+        legend: { textStyle: { color: '#8b9db5' } },
+        xAxis: {
+            axisLine: { lineStyle: { color: '#2a3a4e' } },
+            axisLabel: { color: '#8b9db5' },
+            splitLine: { lineStyle: { color: 'rgba(42,58,78,0.3)' } }
+        },
+        yAxis: {
+            axisLine: { lineStyle: { color: '#2a3a4e' } },
+            axisLabel: { color: '#8b9db5' },
+            splitLine: { lineStyle: { color: 'rgba(42,58,78,0.3)' } }
+        }
+    };
+}
+
+function renderTrendChart() {
+    const chart = initChart('trendChart');
+    if (!chart) return;
+    const filtered = getFilteredData();
+    if (filtered.length === 0) { chart.clear(); return; }
+
+    // Group by date
+    const dateMap = {};
+    filtered.forEach(r => {
+        if (!dateMap[r.dateStr]) {
+            dateMap[r.dateStr] = { article: 0, newComment: 0, followComment: 0, newLike: 0, newFan: 0 };
+        }
+        dateMap[r.dateStr].article += r.articleCount;
+        dateMap[r.dateStr].newComment += r.newComment || 0;
+        dateMap[r.dateStr].followComment += r.followComment;
+        dateMap[r.dateStr].newLike += r.newLike || 0;
+        dateMap[r.dateStr].newFan += r.newFan || 0;
+    });
+
+    const dates = Object.keys(dateMap).sort();
+    const formatDate = d => d.substring(5); // MM-DD
+
+    chart.setOption({
+        ...getChartTheme(),
+        tooltip: { trigger: 'axis' },
+        legend: { data: ['运营文章量', '新增发评量', '跟评量', '新增获赞量', '新增粉丝量'], bottom: 0 },
+        grid: { top: 10, right: 20, bottom: 40, left: 60 },
+        xAxis: { type: 'category', data: dates.map(formatDate) },
+        yAxis: { type: 'value' },
+        series: [
+            { name: '运营文章量', type: 'line', smooth: true, data: dates.map(d => dateMap[d].article), lineStyle: { color: '#4a9eff' }, itemStyle: { color: '#4a9eff' }, areaStyle: { color: 'rgba(74,158,255,0.1)' } },
+            { name: '新增发评量', type: 'line', smooth: true, data: dates.map(d => dateMap[d].newComment), lineStyle: { color: '#00d4aa' }, itemStyle: { color: '#00d4aa' }, areaStyle: { color: 'rgba(0,212,170,0.1)' } },
+            { name: '跟评量', type: 'line', smooth: true, data: dates.map(d => dateMap[d].followComment), lineStyle: { color: '#ff8c42' }, itemStyle: { color: '#ff8c42' }, areaStyle: { color: 'rgba(255,140,66,0.1)' } },
+            { name: '新增获赞量', type: 'bar', data: dates.map(d => dateMap[d].newLike), itemStyle: { color: 'rgba(167,139,250,0.6)', borderRadius: [4,4,0,0] } },
+            { name: '新增粉丝量', type: 'bar', data: dates.map(d => dateMap[d].newFan), itemStyle: { color: 'rgba(255,107,157,0.6)', borderRadius: [4,4,0,0] } }
+        ]
+    });
+}
+
+function renderNewCommentChart() {
+    const chart = initChart('newCommentChart');
+    if (!chart) return;
+    const filtered = getFilteredData();
+    if (filtered.length === 0) { chart.clear(); return; }
+
+    // Group by person + date
+    const persons = [...new Set(filtered.map(r => r.filler))];
+    const dates = [...new Set(filtered.map(r => r.dateStr))].sort();
+    const formatDate = d => d.substring(5);
+
+    const series = persons.map((p, i) => {
+        const colors = ['#4a9eff', '#00d4aa', '#ff8c42', '#a78bfa', '#ff6b9d', '#fbbf24'];
+        const personData = filtered.filter(r => r.filler === p);
+        const dataMap = {};
+        personData.forEach(r => { dataMap[r.dateStr] = r.newComment || 0; });
+        return {
+            name: p, type: 'bar', stack: 'total',
+            data: dates.map(d => dataMap[d] || 0),
+            itemStyle: { color: colors[i % colors.length], borderRadius: dates.length > 1 ? 0 : [4,4,0,0] }
+        };
+    });
+
+    chart.setOption({
+        ...getChartTheme(),
+        tooltip: { trigger: 'axis' },
+        legend: { data: persons, bottom: 0 },
+        grid: { top: 10, right: 20, bottom: 40, left: 60 },
+        xAxis: { type: 'category', data: dates.map(formatDate) },
+        yAxis: { type: 'value', name: '新增发评量' },
+        series
+    });
+}
+
+function renderPersonCompareChart() {
+    const chart = initChart('personCompareChart');
+    if (!chart) return;
+    const filtered = getFilteredByPeriod(getFilteredData());
+    if (filtered.length === 0) { chart.clear(); return; }
+
+    const persons = [...new Set(filtered.map(r => r.filler))];
+    const metrics = ['articleCount', 'newComment', 'followComment', 'newLike', 'newFan'];
+    const labels = ['运营文章量', '新增发评量', '跟评量', '新增获赞量', '新增粉丝量'];
+    const colors = ['#4a9eff', '#00d4aa', '#ff8c42', '#a78bfa', '#ff6b9d'];
+
+    const series = metrics.map((m, i) => ({
+        name: labels[i], type: 'bar',
+        data: persons.map(p => {
+            const rows = filtered.filter(r => r.filler === p);
+            return rows.reduce((s, r) => s + (r[m] || 0), 0);
+        }),
+        itemStyle: { color: colors[i], borderRadius: [4,4,0,0] }
+    }));
+
+    chart.setOption({
+        ...getChartTheme(),
+        tooltip: { trigger: 'axis' },
+        legend: { data: labels, bottom: 0 },
+        grid: { top: 10, right: 20, bottom: 40, left: 60 },
+        xAxis: { type: 'category', data: persons, axisLabel: { rotate: persons.length > 3 ? 15 : 0 } },
+        yAxis: { type: 'value' },
+        series
+    });
+}
+
+function renderPersonRankChart() {
+    const chart = initChart('personRankChart');
+    if (!chart) return;
+    const filtered = getFilteredData();
+    if (filtered.length === 0) { chart.clear(); return; }
+
+    const personMap = {};
+    filtered.forEach(r => {
+        if (!personMap[r.filler]) {
+            personMap[r.filler] = { article: 0, newComment: 0, followComment: 0 };
+        }
+        personMap[r.filler].article += r.articleCount;
+        personMap[r.filler].newComment += r.newComment || 0;
+        personMap[r.filler].followComment += r.followComment;
+    });
+
+    const entries = Object.entries(personMap).sort((a, b) => b[1].newComment - a[1].newComment);
+    const names = entries.map(e => e[0]);
+    const scores = entries.map(e => e[1].article * 1 + e[1].newComment * 2 + e[1].followComment * 1.5);
+
+    chart.setOption({
+        ...getChartTheme(),
+        tooltip: { trigger: 'axis', formatter: params => {
+            const idx = params[0].dataIndex;
+            const e = entries[idx];
+            return `${e[0]}<br/>文章: ${e[1].article} | 发评: ${e[1].newComment} | 跟评: ${e[1].followComment}<br/>综合分: ${params[0].value}`;
+        }},
+        grid: { top: 10, right: 60, bottom: 10, left: 120 },
+        xAxis: { type: 'value', name: '综合分' },
+        yAxis: { type: 'category', data: names, inverse: true },
+        series: [{
+            type: 'bar',
+            data: scores,
+            itemStyle: {
+                borderRadius: [0, 4, 4, 0],
+                color: (params) => {
+                    const colors = [
+                        ['#ff6b9d', '#ff8c42'],
+                        ['#4a9eff', '#00d4aa'],
+                        ['#a78bfa', '#4a9eff']
+                    ];
+                    const ci = params.dataIndex % 3;
+                    return new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+                        { offset: 0, color: colors[ci][0] },
+                        { offset: 1, color: colors[ci][1] }
+                    ]);
+                }
+            },
+            barWidth: 20,
+            label: { show: true, position: 'right', color: '#8b9db5', fontSize: 12 }
+        }]
+    });
+}
+
+function renderAccountCompareChart() {
+    const chart = initChart('accountCompareChart');
+    if (!chart) return;
+    const filtered = getFilteredByPeriod(getFilteredData());
+    if (filtered.length === 0) { chart.clear(); return; }
+
+    const accountMap = {};
+    filtered.forEach(r => {
+        r.accounts.forEach(a => {
+            if (!accountMap[a]) {
+                accountMap[a] = { article: 0, newComment: 0, followComment: 0, newLike: 0, newFan: 0 };
+            }
+            accountMap[a].article += r.articleCount;
+            accountMap[a].newComment += r.newComment || 0;
+            accountMap[a].followComment += r.followComment;
+            accountMap[a].newLike += r.newLike || 0;
+            accountMap[a].newFan += r.newFan || 0;
+        });
+    });
+
+    const accounts = Object.keys(accountMap);
+    const metrics = [
+        { key: 'article', name: '文章量', color: '#4a9eff' },
+        { key: 'newComment', name: '发评量', color: '#00d4aa' },
+        { key: 'followComment', name: '跟评量', color: '#ff8c42' },
+        { key: 'newLike', name: '获赞量', color: '#a78bfa' },
+        { key: 'newFan', name: '粉丝量', color: '#ff6b9d' }
+    ];
+
+    const radarData = metrics.map(m => ({
+        name: m.name,
+        max: Math.max(...accounts.map(a => accountMap[a][m.key])) * 1.2 || 100,
+        color: m.color
+    }));
+
+    const series = accounts.map((a, i) => ({
+        name: a,
+        type: 'radar',
+        data: [{
+            value: metrics.map(m => accountMap[a][m.key]),
+            name: a,
+            areaStyle: { opacity: 0.15 },
+            lineStyle: { width: 2 }
+        }]
+    }));
+
+    chart.setOption({
+        ...getChartTheme(),
+        tooltip: {},
+        legend: { data: accounts, bottom: 0 },
+        radar: {
+            indicator: radarData,
+            shape: 'polygon',
+            splitArea: { areaStyle: { color: ['rgba(42,58,78,0.1)', 'rgba(42,58,78,0.2)'] } }
+        },
+        series
+    });
+}
+
+function renderAccountGrowthChart() {
+    const chart = initChart('accountGrowthChart');
+    if (!chart) return;
+    const filtered = getFilteredData();
+    if (filtered.length === 0) { chart.clear(); return; }
+
+    const dates = [...new Set(filtered.map(r => r.dateStr))].sort();
+    const formatDate = d => d.substring(5);
+
+    // Get unique accounts
+    const allAccounts = [...new Set(filtered.flatMap(r => r.accounts))];
+    const colors = ['#4a9eff', '#00d4aa', '#ff8c42', '#a78bfa', '#ff6b9d', '#fbbf24'];
+
+    const fanSeries = allAccounts.map((a, i) => {
+        const dataMap = {};
+        filtered.filter(r => r.accounts.includes(a)).forEach(r => {
+            dataMap[r.dateStr] = r.newFan || 0;
+        });
+        return {
+            name: a + '-粉丝', type: 'line', smooth: true,
+            data: dates.map(d => dataMap[d] || 0),
+            lineStyle: { color: colors[i % colors.length] },
+            itemStyle: { color: colors[i % colors.length] }
+        };
+    });
+
+    const likeSeries = allAccounts.map((a, i) => {
+        const dataMap = {};
+        filtered.filter(r => r.accounts.includes(a)).forEach(r => {
+            dataMap[r.dateStr] = r.newLike || 0;
+        });
+        return {
+            name: a + '-获赞', type: 'bar',
+            data: dates.map(d => dataMap[d] || 0),
+            itemStyle: { color: colors[(i + 3) % colors.length] + '99', borderRadius: [3,3,0,0] }
+        };
+    });
+
+    chart.setOption({
+        ...getChartTheme(),
+        tooltip: { trigger: 'axis' },
+        legend: { data: [...fanSeries, ...likeSeries].map(s => s.name), bottom: 0, textStyle: { fontSize: 11 } },
+        grid: { top: 10, right: 20, bottom: 40, left: 60 },
+        xAxis: { type: 'category', data: dates.map(formatDate) },
+        yAxis: { type: 'value' },
+        series: [...likeSeries, ...fanSeries]
+    });
+}
+
+function renderWeeklySummaryChart() {
+    const chart = initChart('weeklySummaryChart');
+    if (!chart) return;
+    const filtered = getFilteredData();
+    if (filtered.length === 0) { chart.clear(); return; }
+
+    // Get last 7 days
+    const allDates = [...new Set(filtered.map(r => r.dateStr))].sort();
+    const last7 = allDates.slice(-7);
+    const formatDate = d => d.substring(5);
+
+    const dateMap = {};
+    last7.forEach(d => {
+        dateMap[d] = { article: 0, newComment: 0, followComment: 0, newLike: 0, newFan: 0 };
+    });
+    filtered.filter(r => last7.includes(r.dateStr)).forEach(r => {
+        dateMap[r.dateStr].article += r.articleCount;
+        dateMap[r.dateStr].newComment += r.newComment || 0;
+        dateMap[r.dateStr].followComment += r.followComment;
+        dateMap[r.dateStr].newLike += r.newLike || 0;
+        dateMap[r.dateStr].newFan += r.newFan || 0;
+    });
+
+    const metrics = [
+        { key: 'article', name: '文章量', color: '#4a9eff' },
+        { key: 'newComment', name: '发评量', color: '#00d4aa' },
+        { key: 'followComment', name: '跟评量', color: '#ff8c42' },
+        { key: 'newLike', name: '获赞量', color: '#a78bfa' },
+        { key: 'newFan', name: '粉丝量', color: '#ff6b9d' }
+    ];
+
+    const series = metrics.map(m => ({
+        name: m.name, type: 'bar',
+        data: last7.map(d => dateMap[d][m.key]),
+        itemStyle: { color: m.color, borderRadius: [4,4,0,0] },
+        barGap: '10%'
+    }));
+
+    chart.setOption({
+        ...getChartTheme(),
+        tooltip: { trigger: 'axis' },
+        legend: { data: metrics.map(m => m.name), bottom: 0 },
+        grid: { top: 10, right: 20, bottom: 40, left: 60 },
+        xAxis: { type: 'category', data: last7.map(formatDate) },
+        yAxis: { type: 'value' },
+        series
+    });
+}
+
+// ==================== Analysis ====================
+function renderAnalysis() {
+    const filtered = getFilteredData();
+    const grid = document.getElementById('analysisGrid');
+    if (filtered.length === 0) {
+        grid.innerHTML = '<div class="empty-state"><div class="empty-state-icon">📭</div><div class="empty-state-text">暂无数据</div></div>';
+        return;
+    }
+
+    // Person analysis
+    const persons = [...new Set(filtered.map(r => r.filler))];
+    const personStats = persons.map(p => {
+        const rows = filtered.filter(r => r.filler === p);
+        const totalArticle = rows.reduce((s, r) => s + r.articleCount, 0);
+        const totalNewComment = rows.reduce((s, r) => s + (r.newComment || 0), 0);
+        const totalFollowComment = rows.reduce((s, r) => s + r.followComment, 0);
+        const totalNewLike = rows.reduce((s, r) => s + (r.newLike || 0), 0);
+        const totalNewFan = rows.reduce((s, r) => s + (r.newFan || 0), 0);
+        const avgArticle = (totalArticle / rows.length).toFixed(1);
+        const avgComment = (totalNewComment / rows.length).toFixed(1);
+        return {
+            name: p, days: rows.length, totalArticle, totalNewComment,
+            totalFollowComment, totalNewLike, totalNewFan, avgArticle, avgComment
+        };
+    });
+
+    // Top performer
+    const topPerformer = personStats.sort((a, b) => b.totalNewComment - a.totalNewComment)[0];
+
+    // Account analysis
+    const allAccounts = [...new Set(filtered.flatMap(r => r.accounts))];
+    const accountStats = allAccounts.map(a => {
+        const rows = filtered.filter(r => r.accounts.includes(a));
+        return {
+            name: a,
+            days: rows.length,
+            totalArticle: rows.reduce((s, r) => s + r.articleCount, 0),
+            totalNewComment: rows.reduce((s, r) => s + (r.newComment || 0), 0)
+        };
+    });
+
+    // Trend analysis
+    let trendDirection = '持平';
+    let trendIcon = '➡️';
+    if (filtered.length >= 2) {
+        const last = filtered[filtered.length - 1];
+        const prev = filtered[filtered.length - 2];
+        if ((last.newComment || 0) > (prev.newComment || 0)) { trendDirection = '上升'; trendIcon = '📈'; }
+        else if ((last.newComment || 0) < (prev.newComment || 0)) { trendDirection = '下降'; trendIcon = '📉'; }
+    }
+
+    const maxArticle = Math.max(...personStats.map(p => p.avgArticle));
+
+    grid.innerHTML = `
+        <div class="analysis-card">
+            <div class="analysis-title">🏆 最佳表现者</div>
+            <div class="analysis-item">
+                <span class="analysis-item-label">新增发评量最高</span>
+                <span class="analysis-item-value" style="color:var(--accent-cyan)">${topPerformer.name}</span>
+            </div>
+            <div class="analysis-item">
+                <span class="analysis-item-label">累计新增发评量</span>
+                <span class="analysis-item-value">${topPerformer.totalNewComment.toLocaleString()}</span>
+            </div>
+            <div class="analysis-item">
+                <span class="analysis-item-label">活跃天数</span>
+                <span class="analysis-item-value">${topPerformer.days} 天</span>
+            </div>
+            <div class="analysis-item">
+                <span class="analysis-item-label">日均文章量</span>
+                <span class="analysis-item-value">${topPerformer.avgArticle}</span>
+                <div class="progress-bar">
+                    <div class="progress-bar-fill" style="width:${(topPerformer.avgArticle / maxArticle * 100).toFixed(0)}%;background:var(--accent-cyan)"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="analysis-card">
+            <div class="analysis-title">${trendIcon} 数据变化趋势</div>
+            ${filtered.length >= 2 ? `
+                <div class="analysis-item">
+                    <span class="analysis-item-label">发评量趋势</span>
+                    <span class="analysis-item-value" style="color:${trendDirection === '上升' ? 'var(--accent-cyan)' : trendDirection === '下降' ? 'var(--accent-pink)' : 'var(--text-muted)'}">${trendDirection}</span>
+                </div>
+                <div class="analysis-item">
+                    <span class="analysis-item-label">最新日发评量</span>
+                    <span class="analysis-item-value">${filtered[filtered.length-1].newComment || 0}</span>
+                </div>
+                <div class="analysis-item">
+                    <span class="analysis-item-label">前一日发评量</span>
+                    <span class="analysis-item-value">${filtered[filtered.length-2].newComment || 0}</span>
+                </div>
+                <div class="analysis-item">
+                    <span class="analysis-item-label">变化幅度</span>
+                    <span class="analysis-item-value" style="color:${trendDirection === '上升' ? 'var(--accent-cyan)' : trendDirection === '下降' ? 'var(--accent-pink)' : 'var(--text-muted)'}">
+                        ${trendDirection === '持平' ? '0' : ((filtered[filtered.length-1].newComment - filtered[filtered.length-2].newComment) >= 0 ? '+' : '') + (filtered[filtered.length-1].newComment - filtered[filtered.length-2].newComment)}
+                    </span>
+                </div>
+            ` : `
+                <div class="analysis-item">
+                    <span class="analysis-item-label">数据不足</span>
+                    <span class="analysis-item-value">需要至少2天数据</span>
+                </div>
+            `}
+        </div>
+
+        <div class="analysis-card">
+            <div class="analysis-title">👥 人员效率排行</div>
+            ${personStats.sort((a, b) => b.avgComment - a.avgComment).map(p => `
+                <div class="analysis-item">
+                    <span class="analysis-item-label">${p.name}</span>
+                    <div style="display:flex;align-items:center;gap:8px;">
+                        <span class="analysis-item-value">${p.avgComment}/天</span>
+                        <div class="progress-bar">
+                            <div class="progress-bar-fill" style="width:${(p.avgComment / Math.max(...personStats.map(x=>x.avgComment)) * 100).toFixed(0)}%;background:var(--accent-blue)"></div>
+                        </div>
+                    </div>
+                </div>
+            `).join('')}
+        </div>
+
+        <div class="analysis-card">
+            <div class="analysis-title">🏷️ 账号运营情况</div>
+            ${accountStats.sort((a, b) => b.totalNewComment - a.totalNewComment).map(a => `
+                <div class="analysis-item">
+                    <span class="analysis-item-label">${a.name}</span>
+                    <div style="display:flex;align-items:center;gap:12px;">
+                        <span class="badge badge-blue">${a.days}天</span>
+                        <span class="badge badge-cyan">文章${a.totalArticle}</span>
+                        <span class="badge badge-orange">发评${a.totalNewComment}</span>
+                    </div>
+                </div>
+            `).join('')}
+        </div>
+    `;
+}
+
+// ==================== Table ====================
+function renderTable() {
+    const tbody = document.getElementById('detailTableBody');
+    const filtered = getFilteredData();
+
+    if (filtered.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="13" style="text-align:center;padding:40px;color:var(--text-muted)">暂无数据</td></tr>';
+        return;
+    }
+
+    tbody.innerHTML = filtered.map(r => `
+        <tr>
+            <td>${r.dateStr}</td>
+            <td><span class="badge badge-blue">${r.filler}</span></td>
+            <td>${r.dept}</td>
+            <td>${r.accounts.join(', ')}</td>
+            <td class="num-highlight">${r.articleCount}</td>
+            <td>${r.cumComment.toLocaleString()}</td>
+            <td class="num-up">${(r.newComment || 0).toLocaleString()}</td>
+            <td>${r.followComment}</td>
+            <td>${r.cumLike.toLocaleString()}</td>
+            <td class="num-up">${(r.newLike || 0).toLocaleString()}</td>
+            <td>${r.cumFan.toLocaleString()}</td>
+            <td class="${(r.newFan || 0) > 0 ? 'num-up' : ''}">${(r.newFan || 0).toLocaleString()}</td>
+            <td>${r.attribution || '-'}</td>
+        </tr>
+    `).join('');
+}
+
+// ==================== Period Filter ====================
+function setPeriod(period, el) {
+    currentPeriod = period;
+    document.querySelectorAll('.filter-tabs .filter-tab').forEach(t => t.classList.remove('active'));
+    el.classList.add('active');
+    updateKPIs();
+}
+
+// ==================== Modal ====================
+function openDataModal() {
+    document.getElementById('dataModal').classList.add('active');
+    document.getElementById('dataInput').focus();
+}
+
+function closeDataModal() {
+    document.getElementById('dataModal').classList.remove('active');
+}
+
+function importData() {
+    const text = document.getElementById('dataInput').value.trim();
+    if (!text) {
+        alert('请粘贴数据');
+        return;
+    }
+
+    processedData = parseData(text);
+    if (processedData.length === 0) {
+        alert('未能解析到有效数据，请检查格式');
+        return;
+    }
+
+    closeDataModal();
+    processData();
+}
+
+// ==================== Window Resize ====================
+window.addEventListener('resize', () => {
+    Object.values(chartInstances).forEach(c => {
+        if (c && !c.isDisposed()) c.resize();
+    });
+});
+
+// ==================== Auto-refresh (check data.json every 60s) ====================
+let autoRefreshTimer = null;
+
+async function loadFromDataJson() {
+    try {
+        const resp = await fetch('data.json?t=' + Date.now());
+        if (!resp.ok) return false;
+        const json = await resp.json();
+        if (json.data && json.data.length > 0) {
+            processedData = json.data;
+            // Sort and recalc
+            processedData.sort((a, b) => a.dateStr.localeCompare(b.dateStr));
+            for (let i = 0; i < processedData.length; i++) {
+                const row = processedData[i];
+                const prevRow = findPreviousRow(processedData, i);
+                if (prevRow) {
+                    row.newComment = Math.max(0, row.cumComment - prevRow.cumComment);
+                    row.newLike = Math.max(0, row.cumLike - prevRow.cumLike);
+                    row.newFan = Math.max(0, row.cumFan - prevRow.cumFan);
+                } else {
+                    row.newComment = row.cumComment;
+                    row.newLike = row.cumLike;
+                    row.newFan = row.cumFan;
+                }
+            }
+            return true;
+        }
+    } catch(e) {
+        // data.json not available (e.g. file:// protocol without server)
+    }
+    return false;
+}
+
+// ==================== Init ====================
+document.addEventListener('DOMContentLoaded', async () => {
+    // Priority 1: Load from data.json (auto-updated by fetch_data.sh)
+    const loaded = await loadFromDataJson();
+
+    if (!loaded) {
+        // Priority 2: Load from localStorage (manual import)
+        const savedData = localStorage.getItem('dashboard_data');
+        if (savedData) {
+            try {
+                const parsed = JSON.parse(savedData);
+                if (parsed.length > 0) {
+                    processedData = parsed;
+                }
+            } catch(e) {}
+        }
+    }
+
+    // Priority 3: Fallback to sample data
+    if (processedData.length === 0) {
+        processedData = parseData(SAMPLE_DATA);
+    }
+
+    processData();
+
+    // Auto-refresh every 60 seconds when served via HTTP
+    if (window.location.protocol === 'http:' || window.location.protocol === 'https:') {
+        autoRefreshTimer = setInterval(async () => {
+            const loaded = await loadFromDataJson();
+            if (loaded) processData();
+        }, 60000);
+    }
+});
+
+// Save data when importing manually
+const originalImportData = importData;
+importData = function() {
+    const text = document.getElementById('dataInput').value.trim();
+    if (!text) { alert('请粘贴数据'); return; }
+
+    const data = parseData(text);
+    if (data.length === 0) { alert('未能解析到有效数据，请检查格式'); return; }
+
+    processedData = data;
+    localStorage.setItem('dashboard_data', JSON.stringify(data));
+    closeDataModal();
+    processData();
+};
+</script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+{
+  "updatedAt": "2026-04-03T06:29:33.228Z",
+  "source": "腾讯文档-评论运营工作量提报",
+  "recordCount": 2,
+  "data": [
+    {
+      "filler": "yunsun(孙子渊)",
+      "dept": "Q5组",
+      "dateStr": "2026-04-01",
+      "articleCount": 163,
+      "cumComment": 5154,
+      "followComment": 120,
+      "cumLike": 211791,
+      "cumFan": 229,
+      "attribution": "无",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "隐藏战线-蜗牛小姐"
+      ],
+      "fillTime": "2026/04/03 13:53:19",
+      "newComment": 5154,
+      "newLike": 211791,
+      "newFan": 229
+    },
+    {
+      "filler": "yunsun(孙子渊)",
+      "dept": "Q5组",
+      "dateStr": "2026-04-02",
+      "articleCount": 154,
+      "cumComment": 5222,
+      "followComment": 108,
+      "cumLike": 213891,
+      "cumFan": 232,
+      "attribution": "1",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "隐藏战线-蜗牛小姐"
+      ],
+      "fillTime": "2026/04/03 13:54:52",
+      "newComment": 68,
+      "newLike": 2100,
+      "newFan": 3
+    }
+  ]
+}
