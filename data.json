@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-04-03T07:57:58.162Z",
+  "updatedAt": "2026-04-03T08:00:28.003Z",
   "source": "评论运营数据（工作量提报 + 账号追踪表）",
-  "recordCount": 109,
+  "recordCount": 107,
   "data": [
     {
       "filler": "chaoswwang(王赟菡)",
@@ -2142,46 +2142,6 @@
       "newComment": 60,
       "newLike": 3149,
       "newFan": 1
-    },
-    {
-      "filler": "yunsun(孙子渊)",
-      "dept": "Q5组",
-      "dateStr": "2026-04-01",
-      "articleCount": 163,
-      "cumComment": 5154,
-      "followComment": 120,
-      "cumLike": 211791,
-      "cumFan": 229,
-      "attribution": "无",
-      "project": "新闻-垂类运营",
-      "accounts": [
-        "隐藏战线-蜗牛小姐"
-      ],
-      "fillTime": "2026/04/03 13:53:19",
-      "newComment": 5154,
-      "newLike": 211791,
-      "newFan": 229,
-      "dataSource": "工作量提报"
-    },
-    {
-      "filler": "yunsun(孙子渊)",
-      "dept": "Q5组",
-      "dateStr": "2026-04-02",
-      "articleCount": 154,
-      "cumComment": 5222,
-      "followComment": 108,
-      "cumLike": 213891,
-      "cumFan": 232,
-      "attribution": "1",
-      "project": "新闻-垂类运营",
-      "accounts": [
-        "隐藏战线-蜗牛小姐"
-      ],
-      "fillTime": "2026/04/03 13:54:52",
-      "newComment": 68,
-      "newLike": 2100,
-      "newFan": 3,
-      "dataSource": "工作量提报"
     }
   ]
 }
