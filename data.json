@@ -1,8 +1,2628 @@
 {
-  "updatedAt": "2026-04-03T06:29:33.228Z",
-  "source": "腾讯文档-评论运营工作量提报",
-  "recordCount": 2,
+  "updatedAt": "2026-04-03T07:53:28.311Z",
+  "source": "评论运营数据（工作量提报 + 账号追踪表）",
+  "recordCount": 133,
   "data": [
+    {
+      "filler": "chaoswwang(王赟菡)",
+      "dept": "",
+      "dateStr": "2026-03-20",
+      "articleCount": 145,
+      "cumComment": 4733,
+      "followComment": 186,
+      "cumLike": 365061,
+      "cumFan": 101,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "动感次元—花生了什么树"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 4733,
+      "newLike": 365061,
+      "newFan": 101
+    },
+    {
+      "filler": "青岛评论运营",
+      "dept": "",
+      "dateStr": "2026-03-20",
+      "articleCount": 0,
+      "cumComment": 209188,
+      "followComment": 5387,
+      "cumLike": 100,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "司马迁的硬盘"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 209188,
+      "newLike": 100,
+      "newFan": 0
+    },
+    {
+      "filler": "lenerwang(王迅)",
+      "dept": "",
+      "dateStr": "2026-03-20",
+      "articleCount": 150,
+      "cumComment": 4452,
+      "followComment": 28,
+      "cumLike": 54382,
+      "cumFan": 90,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "房探长"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 4452,
+      "newLike": 54382,
+      "newFan": 90
+    },
+    {
+      "filler": "未指定",
+      "dept": "",
+      "dateStr": "2026-03-20",
+      "articleCount": 0,
+      "cumComment": 185434,
+      "followComment": 4621,
+      "cumLike": 204,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "打油诗人孔乙己"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 185434,
+      "newLike": 204,
+      "newFan": 0
+    },
+    {
+      "filler": "王娇",
+      "dept": "",
+      "dateStr": "2026-03-20",
+      "articleCount": 0,
+      "cumComment": 156,
+      "followComment": 0,
+      "cumLike": 279,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "挽联先生"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 156,
+      "newLike": 279,
+      "newFan": 0
+    },
+    {
+      "filler": "truchenzhang(张若琛)",
+      "dept": "",
+      "dateStr": "2026-03-20",
+      "articleCount": 150,
+      "cumComment": 4403,
+      "followComment": 56,
+      "cumLike": 66691,
+      "cumFan": 203,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "方向盘诗人"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 4403,
+      "newLike": 66691,
+      "newFan": 203
+    },
+    {
+      "filler": "billlzhang(张淇)",
+      "dept": "",
+      "dateStr": "2026-03-20",
+      "articleCount": 145,
+      "cumComment": 4151,
+      "followComment": 221,
+      "cumLike": 69832,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "社会观察眼"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 4151,
+      "newLike": 69832,
+      "newFan": 0
+    },
+    {
+      "filler": "bubblewang(王世浩)",
+      "dept": "",
+      "dateStr": "2026-03-20",
+      "articleCount": 150,
+      "cumComment": 2385,
+      "followComment": 45,
+      "cumLike": 26150,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "跃动星球"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 2385,
+      "newLike": 26150,
+      "newFan": 0
+    },
+    {
+      "filler": "马逸俊",
+      "dept": "",
+      "dateStr": "2026-03-20",
+      "articleCount": 0,
+      "cumComment": 155,
+      "followComment": 0,
+      "cumLike": 254,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "边角料小百科"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 155,
+      "newLike": 254,
+      "newFan": 0
+    },
+    {
+      "filler": "jiaoiiwang(王娇)",
+      "dept": "",
+      "dateStr": "2026-03-20",
+      "articleCount": 160,
+      "cumComment": 4650,
+      "followComment": 103,
+      "cumLike": 95131,
+      "cumFan": 50,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "隐藏战线-蜗牛小姐"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 4650,
+      "newLike": 95131,
+      "newFan": 50
+    },
+    {
+      "filler": "chaoswwang(王赟菡)",
+      "dept": "",
+      "dateStr": "2026-03-21",
+      "articleCount": 151,
+      "cumComment": 4799,
+      "followComment": 762,
+      "cumLike": 372615,
+      "cumFan": 101,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "动感次元—花生了什么树"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 66,
+      "newLike": 7554,
+      "newFan": 0
+    },
+    {
+      "filler": "青岛评论运营",
+      "dept": "",
+      "dateStr": "2026-03-21",
+      "articleCount": 0,
+      "cumComment": 214024,
+      "followComment": 5468,
+      "cumLike": 103,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "司马迁的硬盘"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 4836,
+      "newLike": 3,
+      "newFan": 0
+    },
+    {
+      "filler": "lenerwang(王迅)",
+      "dept": "",
+      "dateStr": "2026-03-21",
+      "articleCount": 150,
+      "cumComment": 4515,
+      "followComment": 97,
+      "cumLike": 55199,
+      "cumFan": 93,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "房探长"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 63,
+      "newLike": 817,
+      "newFan": 3
+    },
+    {
+      "filler": "未指定",
+      "dept": "",
+      "dateStr": "2026-03-21",
+      "articleCount": 0,
+      "cumComment": 189806,
+      "followComment": 4694,
+      "cumLike": 208,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "打油诗人孔乙己"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 4372,
+      "newLike": 4,
+      "newFan": 0
+    },
+    {
+      "filler": "王娇",
+      "dept": "",
+      "dateStr": "2026-03-21",
+      "articleCount": 0,
+      "cumComment": 158,
+      "followComment": 0,
+      "cumLike": 148,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "挽联先生"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 2,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "truchenzhang(张若琛)",
+      "dept": "",
+      "dateStr": "2026-03-21",
+      "articleCount": 150,
+      "cumComment": 4475,
+      "followComment": 19,
+      "cumLike": 66930,
+      "cumFan": 206,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "方向盘诗人"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 72,
+      "newLike": 239,
+      "newFan": 3
+    },
+    {
+      "filler": "billlzhang(张淇)",
+      "dept": "",
+      "dateStr": "2026-03-21",
+      "articleCount": 0,
+      "cumComment": 4151,
+      "followComment": 0,
+      "cumLike": 69832,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "社会观察眼"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "bubblewang(王世浩)",
+      "dept": "",
+      "dateStr": "2026-03-21",
+      "articleCount": 0,
+      "cumComment": 2385,
+      "followComment": 0,
+      "cumLike": 26150,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "跃动星球"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "马逸俊",
+      "dept": "",
+      "dateStr": "2026-03-21",
+      "articleCount": 0,
+      "cumComment": 157,
+      "followComment": 0,
+      "cumLike": 321,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "边角料小百科"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 2,
+      "newLike": 67,
+      "newFan": 0
+    },
+    {
+      "filler": "jiaoiiwang(王娇)",
+      "dept": "",
+      "dateStr": "2026-03-21",
+      "articleCount": 150,
+      "cumComment": 4718,
+      "followComment": 152,
+      "cumLike": 97453,
+      "cumFan": 51,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "隐藏战线-蜗牛小姐"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 68,
+      "newLike": 2322,
+      "newFan": 1
+    },
+    {
+      "filler": "chaoswwang(王赟菡)",
+      "dept": "",
+      "dateStr": "2026-03-22",
+      "articleCount": 147,
+      "cumComment": 4862,
+      "followComment": 231,
+      "cumLike": 378384,
+      "cumFan": 104,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "动感次元—花生了什么树"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 63,
+      "newLike": 5769,
+      "newFan": 3
+    },
+    {
+      "filler": "青岛评论运营",
+      "dept": "",
+      "dateStr": "2026-03-22",
+      "articleCount": 0,
+      "cumComment": 218538,
+      "followComment": 5539,
+      "cumLike": 105,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "司马迁的硬盘"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 4514,
+      "newLike": 2,
+      "newFan": 0
+    },
+    {
+      "filler": "lenerwang(王迅)",
+      "dept": "",
+      "dateStr": "2026-03-22",
+      "articleCount": 150,
+      "cumComment": 4585,
+      "followComment": 71,
+      "cumLike": 55736,
+      "cumFan": 93,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "房探长"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 70,
+      "newLike": 537,
+      "newFan": 0
+    },
+    {
+      "filler": "未指定",
+      "dept": "",
+      "dateStr": "2026-03-22",
+      "articleCount": 0,
+      "cumComment": 189806,
+      "followComment": 4694,
+      "cumLike": 208,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "打油诗人孔乙己"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "truchenzhang(张若琛)",
+      "dept": "",
+      "dateStr": "2026-03-22",
+      "articleCount": 160,
+      "cumComment": 4546,
+      "followComment": 32,
+      "cumLike": 67222,
+      "cumFan": 209,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "方向盘诗人"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 71,
+      "newLike": 292,
+      "newFan": 3
+    },
+    {
+      "filler": "billlzhang(张淇)",
+      "dept": "",
+      "dateStr": "2026-03-22",
+      "articleCount": 152,
+      "cumComment": 4225,
+      "followComment": 34,
+      "cumLike": 70490,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "社会观察眼"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 74,
+      "newLike": 658,
+      "newFan": 0
+    },
+    {
+      "filler": "bubblewang(王世浩)",
+      "dept": "",
+      "dateStr": "2026-03-22",
+      "articleCount": 0,
+      "cumComment": 2385,
+      "followComment": 0,
+      "cumLike": 26150,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "跃动星球"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "马逸俊",
+      "dept": "",
+      "dateStr": "2026-03-22",
+      "articleCount": 0,
+      "cumComment": 161,
+      "followComment": 0,
+      "cumLike": 211,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "边角料小百科"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 4,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "jiaoiiwang(王娇)",
+      "dept": "",
+      "dateStr": "2026-03-22",
+      "articleCount": 150,
+      "cumComment": 4785,
+      "followComment": 171,
+      "cumLike": 99230,
+      "cumFan": 52,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "隐藏战线-蜗牛小姐"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 67,
+      "newLike": 1777,
+      "newFan": 1
+    },
+    {
+      "filler": "hilaryma(马逸俊)",
+      "dept": "",
+      "dateStr": "2026-03-23",
+      "articleCount": 150,
+      "cumComment": 4206,
+      "followComment": 259,
+      "cumLike": 241416,
+      "cumFan": 114,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "世界脉搏—山的那边"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 4206,
+      "newLike": 241416,
+      "newFan": 114
+    },
+    {
+      "filler": "rilefsyyu(于潇潇)",
+      "dept": "",
+      "dateStr": "2026-03-23",
+      "articleCount": 160,
+      "cumComment": 0,
+      "followComment": 48,
+      "cumLike": 0,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "养生漫游记"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "chaoswwang(王赟菡)",
+      "dept": "",
+      "dateStr": "2026-03-23",
+      "articleCount": 150,
+      "cumComment": 4932,
+      "followComment": 239,
+      "cumLike": 384805,
+      "cumFan": 106,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "动感次元—花生了什么树"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 70,
+      "newLike": 6421,
+      "newFan": 2
+    },
+    {
+      "filler": "青岛评论运营",
+      "dept": "",
+      "dateStr": "2026-03-23",
+      "articleCount": 0,
+      "cumComment": 218538,
+      "followComment": 5539,
+      "cumLike": 105,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "司马迁的硬盘"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "lenerwang(王迅)",
+      "dept": "",
+      "dateStr": "2026-03-23",
+      "articleCount": 150,
+      "cumComment": 4655,
+      "followComment": 59,
+      "cumLike": 56155,
+      "cumFan": 94,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "房探长"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 70,
+      "newLike": 419,
+      "newFan": 1
+    },
+    {
+      "filler": "未指定",
+      "dept": "",
+      "dateStr": "2026-03-23",
+      "articleCount": 0,
+      "cumComment": 193610,
+      "followComment": 4775,
+      "cumLike": 210,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "打油诗人孔乙己"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 3804,
+      "newLike": 2,
+      "newFan": 0
+    },
+    {
+      "filler": "王娇",
+      "dept": "",
+      "dateStr": "2026-03-23",
+      "articleCount": 0,
+      "cumComment": 162,
+      "followComment": 0,
+      "cumLike": 131,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "挽联先生"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 4,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "truchenzhang(张若琛)",
+      "dept": "",
+      "dateStr": "2026-03-23",
+      "articleCount": 150,
+      "cumComment": 4617,
+      "followComment": 50,
+      "cumLike": 68512,
+      "cumFan": 212,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "方向盘诗人"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 71,
+      "newLike": 1290,
+      "newFan": 3
+    },
+    {
+      "filler": "billlzhang(张淇)",
+      "dept": "",
+      "dateStr": "2026-03-23",
+      "articleCount": 162,
+      "cumComment": 4305,
+      "followComment": 20,
+      "cumLike": 71170,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "社会观察眼"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 80,
+      "newLike": 680,
+      "newFan": 0
+    },
+    {
+      "filler": "bubblewang(王世浩)",
+      "dept": "",
+      "dateStr": "2026-03-23",
+      "articleCount": 150,
+      "cumComment": 2460,
+      "followComment": 25,
+      "cumLike": 27432,
+      "cumFan": 22,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "跃动星球"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 75,
+      "newLike": 1282,
+      "newFan": 22
+    },
+    {
+      "filler": "jiaoiiwang(王娇)",
+      "dept": "",
+      "dateStr": "2026-03-23",
+      "articleCount": 0,
+      "cumComment": 4785,
+      "followComment": 0,
+      "cumLike": 99230,
+      "cumFan": 52,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "隐藏战线-蜗牛小姐"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "hilaryma(马逸俊)",
+      "dept": "",
+      "dateStr": "2026-03-24",
+      "articleCount": 0,
+      "cumComment": 4206,
+      "followComment": 0,
+      "cumLike": 241416,
+      "cumFan": 114,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "世界脉搏—山的那边"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "rilefsyyu(于潇潇)",
+      "dept": "",
+      "dateStr": "2026-03-24",
+      "articleCount": 152,
+      "cumComment": 5139,
+      "followComment": 70,
+      "cumLike": 335586,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "养生漫游记"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 5139,
+      "newLike": 335586,
+      "newFan": 0
+    },
+    {
+      "filler": "chaoswwang(王赟菡)",
+      "dept": "",
+      "dateStr": "2026-03-24",
+      "articleCount": 152,
+      "cumComment": 5002,
+      "followComment": 163,
+      "cumLike": 390011,
+      "cumFan": 108,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "动感次元—花生了什么树"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 70,
+      "newLike": 5206,
+      "newFan": 2
+    },
+    {
+      "filler": "青岛评论运营",
+      "dept": "",
+      "dateStr": "2026-03-24",
+      "articleCount": 0,
+      "cumComment": 218538,
+      "followComment": 5539,
+      "cumLike": 105,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "司马迁的硬盘"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "lenerwang(王迅)",
+      "dept": "",
+      "dateStr": "2026-03-24",
+      "articleCount": 158,
+      "cumComment": 4710,
+      "followComment": 110,
+      "cumLike": 56347,
+      "cumFan": 94,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "房探长"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 55,
+      "newLike": 192,
+      "newFan": 0
+    },
+    {
+      "filler": "未指定",
+      "dept": "",
+      "dateStr": "2026-03-24",
+      "articleCount": 0,
+      "cumComment": 196026,
+      "followComment": 4835,
+      "cumLike": 212,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "打油诗人孔乙己"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 2416,
+      "newLike": 2,
+      "newFan": 0
+    },
+    {
+      "filler": "王娇",
+      "dept": "",
+      "dateStr": "2026-03-24",
+      "articleCount": 0,
+      "cumComment": 150,
+      "followComment": 0,
+      "cumLike": 151,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "挽联先生"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 20,
+      "newFan": 0
+    },
+    {
+      "filler": "truchenzhang(张若琛)",
+      "dept": "",
+      "dateStr": "2026-03-24",
+      "articleCount": 0,
+      "cumComment": 4617,
+      "followComment": 0,
+      "cumLike": 68512,
+      "cumFan": 212,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "方向盘诗人"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "billlzhang(张淇)",
+      "dept": "",
+      "dateStr": "2026-03-24",
+      "articleCount": 140,
+      "cumComment": 4370,
+      "followComment": 118,
+      "cumLike": 76378,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "社会观察眼"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 65,
+      "newLike": 5208,
+      "newFan": 0
+    },
+    {
+      "filler": "bubblewang(王世浩)",
+      "dept": "",
+      "dateStr": "2026-03-24",
+      "articleCount": 150,
+      "cumComment": 2510,
+      "followComment": 55,
+      "cumLike": 28130,
+      "cumFan": 22,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "跃动星球"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 50,
+      "newLike": 698,
+      "newFan": 0
+    },
+    {
+      "filler": "jiaoiiwang(王娇)",
+      "dept": "",
+      "dateStr": "2026-03-24",
+      "articleCount": 0,
+      "cumComment": 4785,
+      "followComment": 0,
+      "cumLike": 99230,
+      "cumFan": 52,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "隐藏战线-蜗牛小姐"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "hilaryma(马逸俊)",
+      "dept": "",
+      "dateStr": "2026-03-25",
+      "articleCount": 154,
+      "cumComment": 4261,
+      "followComment": 22,
+      "cumLike": 244929,
+      "cumFan": 114,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "世界脉搏—山的那边"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 55,
+      "newLike": 3513,
+      "newFan": 0
+    },
+    {
+      "filler": "rilefsyyu(于潇潇)",
+      "dept": "",
+      "dateStr": "2026-03-25",
+      "articleCount": 0,
+      "cumComment": 5210,
+      "followComment": 0,
+      "cumLike": 337623,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "养生漫游记"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 71,
+      "newLike": 2037,
+      "newFan": 0
+    },
+    {
+      "filler": "chaoswwang(王赟菡)",
+      "dept": "",
+      "dateStr": "2026-03-25",
+      "articleCount": 0,
+      "cumComment": 5002,
+      "followComment": 0,
+      "cumLike": 390011,
+      "cumFan": 108,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "动感次元—花生了什么树"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "青岛评论运营",
+      "dept": "",
+      "dateStr": "2026-03-25",
+      "articleCount": 0,
+      "cumComment": 218538,
+      "followComment": 5539,
+      "cumLike": 105,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "司马迁的硬盘"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "lenerwang(王迅)",
+      "dept": "",
+      "dateStr": "2026-03-25",
+      "articleCount": 0,
+      "cumComment": 4710,
+      "followComment": 0,
+      "cumLike": 56347,
+      "cumFan": 94,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "房探长"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "未指定",
+      "dept": "",
+      "dateStr": "2026-03-25",
+      "articleCount": 0,
+      "cumComment": 199792,
+      "followComment": 4900,
+      "cumLike": 215,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "打油诗人孔乙己"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 3766,
+      "newLike": 3,
+      "newFan": 0
+    },
+    {
+      "filler": "王娇",
+      "dept": "",
+      "dateStr": "2026-03-25",
+      "articleCount": 0,
+      "cumComment": 153,
+      "followComment": 0,
+      "cumLike": 198,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "挽联先生"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 3,
+      "newLike": 47,
+      "newFan": 0
+    },
+    {
+      "filler": "truchenzhang(张若琛)",
+      "dept": "",
+      "dateStr": "2026-03-25",
+      "articleCount": 0,
+      "cumComment": 4617,
+      "followComment": 0,
+      "cumLike": 68512,
+      "cumFan": 212,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "方向盘诗人"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "billlzhang(张淇)",
+      "dept": "",
+      "dateStr": "2026-03-25",
+      "articleCount": 141,
+      "cumComment": 4436,
+      "followComment": 201,
+      "cumLike": 77387,
+      "cumFan": 38,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "社会观察眼"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 66,
+      "newLike": 1009,
+      "newFan": 38
+    },
+    {
+      "filler": "bubblewang(王世浩)",
+      "dept": "",
+      "dateStr": "2026-03-25",
+      "articleCount": 150,
+      "cumComment": 2561,
+      "followComment": 8,
+      "cumLike": 28541,
+      "cumFan": 22,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "跃动星球"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 51,
+      "newLike": 411,
+      "newFan": 0
+    },
+    {
+      "filler": "jiaoiiwang(王娇)",
+      "dept": "",
+      "dateStr": "2026-03-25",
+      "articleCount": 140,
+      "cumComment": 4840,
+      "followComment": 71,
+      "cumLike": 102766,
+      "cumFan": 53,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "隐藏战线-蜗牛小姐"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 55,
+      "newLike": 3536,
+      "newFan": 1
+    },
+    {
+      "filler": "hilaryma(马逸俊)",
+      "dept": "",
+      "dateStr": "2026-03-26",
+      "articleCount": 153,
+      "cumComment": 4321,
+      "followComment": 112,
+      "cumLike": 248609,
+      "cumFan": 114,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "世界脉搏—山的那边"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 60,
+      "newLike": 3680,
+      "newFan": 0
+    },
+    {
+      "filler": "rilefsyyu(于潇潇)",
+      "dept": "",
+      "dateStr": "2026-03-26",
+      "articleCount": 0,
+      "cumComment": 5210,
+      "followComment": 0,
+      "cumLike": 337623,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "养生漫游记"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "chaoswwang(王赟菡)",
+      "dept": "",
+      "dateStr": "2026-03-26",
+      "articleCount": 0,
+      "cumComment": 5002,
+      "followComment": 0,
+      "cumLike": 390011,
+      "cumFan": 108,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "动感次元—花生了什么树"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "青岛评论运营",
+      "dept": "",
+      "dateStr": "2026-03-26",
+      "articleCount": 0,
+      "cumComment": 224700,
+      "followComment": 5604,
+      "cumLike": 108,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "司马迁的硬盘"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 6162,
+      "newLike": 3,
+      "newFan": 0
+    },
+    {
+      "filler": "lenerwang(王迅)",
+      "dept": "",
+      "dateStr": "2026-03-26",
+      "articleCount": 0,
+      "cumComment": 4710,
+      "followComment": 0,
+      "cumLike": 56347,
+      "cumFan": 94,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "房探长"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "未指定",
+      "dept": "",
+      "dateStr": "2026-03-26",
+      "articleCount": 0,
+      "cumComment": 201486,
+      "followComment": 4931,
+      "cumLike": 217,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "打油诗人孔乙己"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 1694,
+      "newLike": 2,
+      "newFan": 0
+    },
+    {
+      "filler": "王娇",
+      "dept": "",
+      "dateStr": "2026-03-26",
+      "articleCount": 0,
+      "cumComment": 70,
+      "followComment": 0,
+      "cumLike": 224,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "挽联先生"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 26,
+      "newFan": 0
+    },
+    {
+      "filler": "truchenzhang(张若琛)",
+      "dept": "",
+      "dateStr": "2026-03-26",
+      "articleCount": 150,
+      "cumComment": 4671,
+      "followComment": 143,
+      "cumLike": 68985,
+      "cumFan": 215,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "方向盘诗人"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 54,
+      "newLike": 473,
+      "newFan": 3
+    },
+    {
+      "filler": "billlzhang(张淇)",
+      "dept": "",
+      "dateStr": "2026-03-26",
+      "articleCount": 145,
+      "cumComment": 4502,
+      "followComment": 30,
+      "cumLike": 78228,
+      "cumFan": 39,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "社会观察眼"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 66,
+      "newLike": 841,
+      "newFan": 1
+    },
+    {
+      "filler": "bubblewang(王世浩)",
+      "dept": "",
+      "dateStr": "2026-03-26",
+      "articleCount": 0,
+      "cumComment": 2561,
+      "followComment": 0,
+      "cumLike": 28541,
+      "cumFan": 22,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "跃动星球"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "马逸俊",
+      "dept": "",
+      "dateStr": "2026-03-26",
+      "articleCount": 0,
+      "cumComment": 151,
+      "followComment": 0,
+      "cumLike": 129,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "边角料小百科"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "jiaoiiwang(王娇)",
+      "dept": "",
+      "dateStr": "2026-03-26",
+      "articleCount": 140,
+      "cumComment": 4890,
+      "followComment": 117,
+      "cumLike": 103412,
+      "cumFan": 54,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "隐藏战线-蜗牛小姐"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 50,
+      "newLike": 646,
+      "newFan": 1
+    },
+    {
+      "filler": "hilaryma(马逸俊)",
+      "dept": "",
+      "dateStr": "2026-03-27",
+      "articleCount": 150,
+      "cumComment": 4371,
+      "followComment": 58,
+      "cumLike": 250950,
+      "cumFan": 116,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "世界脉搏—山的那边"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 50,
+      "newLike": 2341,
+      "newFan": 2
+    },
+    {
+      "filler": "rilefsyyu(于潇潇)",
+      "dept": "",
+      "dateStr": "2026-03-27",
+      "articleCount": 0,
+      "cumComment": 5210,
+      "followComment": 0,
+      "cumLike": 337623,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "养生漫游记"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "chaoswwang(王赟菡)",
+      "dept": "",
+      "dateStr": "2026-03-27",
+      "articleCount": 150,
+      "cumComment": 5053,
+      "followComment": 163,
+      "cumLike": 398195,
+      "cumFan": 110,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "动感次元—花生了什么树"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 51,
+      "newLike": 8184,
+      "newFan": 2
+    },
+    {
+      "filler": "青岛评论运营",
+      "dept": "",
+      "dateStr": "2026-03-27",
+      "articleCount": 0,
+      "cumComment": 230100,
+      "followComment": 5671,
+      "cumLike": 112,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "司马迁的硬盘"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 5400,
+      "newLike": 4,
+      "newFan": 0
+    },
+    {
+      "filler": "lenerwang(王迅)",
+      "dept": "",
+      "dateStr": "2026-03-27",
+      "articleCount": 130,
+      "cumComment": 4760,
+      "followComment": 28,
+      "cumLike": 57405,
+      "cumFan": 95,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "房探长"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 50,
+      "newLike": 1058,
+      "newFan": 1
+    },
+    {
+      "filler": "未指定",
+      "dept": "",
+      "dateStr": "2026-03-27",
+      "articleCount": 0,
+      "cumComment": 204089,
+      "followComment": 4993,
+      "cumLike": 220,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "打油诗人孔乙己"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 2603,
+      "newLike": 3,
+      "newFan": 0
+    },
+    {
+      "filler": "王娇",
+      "dept": "",
+      "dateStr": "2026-03-27",
+      "articleCount": 0,
+      "cumComment": 155,
+      "followComment": 0,
+      "cumLike": 46,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "挽联先生"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 85,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "truchenzhang(张若琛)",
+      "dept": "",
+      "dateStr": "2026-03-27",
+      "articleCount": 140,
+      "cumComment": 4721,
+      "followComment": 19,
+      "cumLike": 69439,
+      "cumFan": 218,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "方向盘诗人"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 50,
+      "newLike": 454,
+      "newFan": 3
+    },
+    {
+      "filler": "billlzhang(张淇)",
+      "dept": "",
+      "dateStr": "2026-03-27",
+      "articleCount": 0,
+      "cumComment": 4502,
+      "followComment": 0,
+      "cumLike": 78228,
+      "cumFan": 39,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "社会观察眼"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "bubblewang(王世浩)",
+      "dept": "",
+      "dateStr": "2026-03-27",
+      "articleCount": 0,
+      "cumComment": 2561,
+      "followComment": 0,
+      "cumLike": 28541,
+      "cumFan": 22,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "跃动星球"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "马逸俊",
+      "dept": "",
+      "dateStr": "2026-03-27",
+      "articleCount": 0,
+      "cumComment": 171,
+      "followComment": 0,
+      "cumLike": 241,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "边角料小百科"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 20,
+      "newLike": 112,
+      "newFan": 0
+    },
+    {
+      "filler": "jiaoiiwang(王娇)",
+      "dept": "",
+      "dateStr": "2026-03-27",
+      "articleCount": 140,
+      "cumComment": 4940,
+      "followComment": 35,
+      "cumLike": 104400,
+      "cumFan": 55,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "隐藏战线-蜗牛小姐"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 50,
+      "newLike": 988,
+      "newFan": 1
+    },
+    {
+      "filler": "hilaryma(马逸俊)",
+      "dept": "",
+      "dateStr": "2026-03-28",
+      "articleCount": 150,
+      "cumComment": 4421,
+      "followComment": 100,
+      "cumLike": 254136,
+      "cumFan": 124,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "世界脉搏—山的那边"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 50,
+      "newLike": 3186,
+      "newFan": 8
+    },
+    {
+      "filler": "rilefsyyu(于潇潇)",
+      "dept": "",
+      "dateStr": "2026-03-28",
+      "articleCount": 143,
+      "cumComment": 5270,
+      "followComment": 54,
+      "cumLike": 342811,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "养生漫游记"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 60,
+      "newLike": 5188,
+      "newFan": 0
+    },
+    {
+      "filler": "chaoswwang(王赟菡)",
+      "dept": "",
+      "dateStr": "2026-03-28",
+      "articleCount": 150,
+      "cumComment": 5105,
+      "followComment": 124,
+      "cumLike": 401899,
+      "cumFan": 110,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "动感次元—花生了什么树"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 52,
+      "newLike": 3704,
+      "newFan": 0
+    },
+    {
+      "filler": "青岛评论运营",
+      "dept": "",
+      "dateStr": "2026-03-28",
+      "articleCount": 0,
+      "cumComment": 234173,
+      "followComment": 5732,
+      "cumLike": 112,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "司马迁的硬盘"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 4073,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "lenerwang(王迅)",
+      "dept": "",
+      "dateStr": "2026-03-28",
+      "articleCount": 150,
+      "cumComment": 4805,
+      "followComment": 66,
+      "cumLike": 57708,
+      "cumFan": 95,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "房探长"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 45,
+      "newLike": 303,
+      "newFan": 0
+    },
+    {
+      "filler": "未指定",
+      "dept": "",
+      "dateStr": "2026-03-28",
+      "articleCount": 0,
+      "cumComment": 204089,
+      "followComment": 4993,
+      "cumLike": 220,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "打油诗人孔乙己"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "truchenzhang(张若琛)",
+      "dept": "",
+      "dateStr": "2026-03-28",
+      "articleCount": 150,
+      "cumComment": 4776,
+      "followComment": 28,
+      "cumLike": 69992,
+      "cumFan": 221,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "方向盘诗人"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 55,
+      "newLike": 553,
+      "newFan": 3
+    },
+    {
+      "filler": "billlzhang(张淇)",
+      "dept": "",
+      "dateStr": "2026-03-28",
+      "articleCount": 0,
+      "cumComment": 4502,
+      "followComment": 0,
+      "cumLike": 78228,
+      "cumFan": 39,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "社会观察眼"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "bubblewang(王世浩)",
+      "dept": "",
+      "dateStr": "2026-03-28",
+      "articleCount": 0,
+      "cumComment": 2561,
+      "followComment": 0,
+      "cumLike": 28541,
+      "cumFan": 22,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "跃动星球"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "马逸俊",
+      "dept": "",
+      "dateStr": "2026-03-28",
+      "articleCount": 0,
+      "cumComment": 153,
+      "followComment": 0,
+      "cumLike": 229,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "边角料小百科"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "jiaoiiwang(王娇)",
+      "dept": "",
+      "dateStr": "2026-03-28",
+      "articleCount": 150,
+      "cumComment": 5000,
+      "followComment": 87,
+      "cumLike": 105592,
+      "cumFan": 55,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "隐藏战线-蜗牛小姐"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 60,
+      "newLike": 1192,
+      "newFan": 0
+    },
+    {
+      "filler": "hilaryma(马逸俊)",
+      "dept": "",
+      "dateStr": "2026-03-29",
+      "articleCount": 150,
+      "cumComment": 4481,
+      "followComment": 31,
+      "cumLike": 256562,
+      "cumFan": 125,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "世界脉搏—山的那边"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 60,
+      "newLike": 2426,
+      "newFan": 1
+    },
+    {
+      "filler": "rilefsyyu(于潇潇)",
+      "dept": "",
+      "dateStr": "2026-03-29",
+      "articleCount": 150,
+      "cumComment": 5331,
+      "followComment": 214,
+      "cumLike": 346438,
+      "cumFan": 137,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "养生漫游记"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 61,
+      "newLike": 3627,
+      "newFan": 137
+    },
+    {
+      "filler": "chaoswwang(王赟菡)",
+      "dept": "",
+      "dateStr": "2026-03-29",
+      "articleCount": 148,
+      "cumComment": 5155,
+      "followComment": 105,
+      "cumLike": 404816,
+      "cumFan": 110,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "动感次元—花生了什么树"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 50,
+      "newLike": 2917,
+      "newFan": 0
+    },
+    {
+      "filler": "青岛评论运营",
+      "dept": "",
+      "dateStr": "2026-03-29",
+      "articleCount": 0,
+      "cumComment": 238784,
+      "followComment": 5795,
+      "cumLike": 112,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "司马迁的硬盘"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 4611,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "lenerwang(王迅)",
+      "dept": "",
+      "dateStr": "2026-03-29",
+      "articleCount": 150,
+      "cumComment": 4855,
+      "followComment": 28,
+      "cumLike": 58181,
+      "cumFan": 96,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "房探长"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 50,
+      "newLike": 473,
+      "newFan": 1
+    },
+    {
+      "filler": "未指定",
+      "dept": "",
+      "dateStr": "2026-03-29",
+      "articleCount": 0,
+      "cumComment": 204089,
+      "followComment": 4993,
+      "cumLike": 220,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "打油诗人孔乙己"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "truchenzhang(张若琛)",
+      "dept": "",
+      "dateStr": "2026-03-29",
+      "articleCount": 150,
+      "cumComment": 4826,
+      "followComment": 31,
+      "cumLike": 70238,
+      "cumFan": 226,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "方向盘诗人"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 50,
+      "newLike": 246,
+      "newFan": 5
+    },
+    {
+      "filler": "billlzhang(张淇)",
+      "dept": "",
+      "dateStr": "2026-03-29",
+      "articleCount": 0,
+      "cumComment": 4502,
+      "followComment": 0,
+      "cumLike": 78228,
+      "cumFan": 39,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "社会观察眼"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "bubblewang(王世浩)",
+      "dept": "",
+      "dateStr": "2026-03-29",
+      "articleCount": 0,
+      "cumComment": 2561,
+      "followComment": 0,
+      "cumLike": 28541,
+      "cumFan": 22,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "跃动星球"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "马逸俊",
+      "dept": "",
+      "dateStr": "2026-03-29",
+      "articleCount": 0,
+      "cumComment": 151,
+      "followComment": 0,
+      "cumLike": 160,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "边角料小百科"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "jiaoiiwang(王娇)",
+      "dept": "",
+      "dateStr": "2026-03-29",
+      "articleCount": 0,
+      "cumComment": 5000,
+      "followComment": 0,
+      "cumLike": 105592,
+      "cumFan": 55,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "隐藏战线-蜗牛小姐"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "hilaryma(马逸俊)",
+      "dept": "",
+      "dateStr": "2026-03-30",
+      "articleCount": 150,
+      "cumComment": 4531,
+      "followComment": 75,
+      "cumLike": 260075,
+      "cumFan": 127,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "世界脉搏—山的那边"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 50,
+      "newLike": 3513,
+      "newFan": 2
+    },
+    {
+      "filler": "rilefsyyu(于潇潇)",
+      "dept": "",
+      "dateStr": "2026-03-30",
+      "articleCount": 150,
+      "cumComment": 5399,
+      "followComment": 160,
+      "cumLike": 350479,
+      "cumFan": 138,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "养生漫游记"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 68,
+      "newLike": 4041,
+      "newFan": 1
+    },
+    {
+      "filler": "chaoswwang(王赟菡)",
+      "dept": "",
+      "dateStr": "2026-03-30",
+      "articleCount": 155,
+      "cumComment": 5205,
+      "followComment": 121,
+      "cumLike": 408574,
+      "cumFan": 110,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "动感次元—花生了什么树"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 50,
+      "newLike": 3758,
+      "newFan": 0
+    },
+    {
+      "filler": "青岛评论运营",
+      "dept": "",
+      "dateStr": "2026-03-30",
+      "articleCount": 0,
+      "cumComment": 238784,
+      "followComment": 5795,
+      "cumLike": 112,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "司马迁的硬盘"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "lenerwang(王迅)",
+      "dept": "",
+      "dateStr": "2026-03-30",
+      "articleCount": 150,
+      "cumComment": 4910,
+      "followComment": 21,
+      "cumLike": 58382,
+      "cumFan": 97,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "房探长"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 55,
+      "newLike": 201,
+      "newFan": 1
+    },
+    {
+      "filler": "未指定",
+      "dept": "",
+      "dateStr": "2026-03-30",
+      "articleCount": 0,
+      "cumComment": 207618,
+      "followComment": 5048,
+      "cumLike": 221,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "打油诗人孔乙己"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 3529,
+      "newLike": 1,
+      "newFan": 0
+    },
+    {
+      "filler": "王娇",
+      "dept": "",
+      "dateStr": "2026-03-30",
+      "articleCount": 0,
+      "cumComment": 158,
+      "followComment": 0,
+      "cumLike": 154,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "挽联先生"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 3,
+      "newLike": 108,
+      "newFan": 0
+    },
+    {
+      "filler": "truchenzhang(张若琛)",
+      "dept": "",
+      "dateStr": "2026-03-30",
+      "articleCount": 150,
+      "cumComment": 4881,
+      "followComment": 16,
+      "cumLike": 71093,
+      "cumFan": 229,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "方向盘诗人"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 55,
+      "newLike": 855,
+      "newFan": 3
+    },
+    {
+      "filler": "billlzhang(张淇)",
+      "dept": "",
+      "dateStr": "2026-03-30",
+      "articleCount": 155,
+      "cumComment": 4568,
+      "followComment": 43,
+      "cumLike": 80240,
+      "cumFan": 39,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "社会观察眼"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 66,
+      "newLike": 2012,
+      "newFan": 0
+    },
+    {
+      "filler": "bubblewang(王世浩)",
+      "dept": "",
+      "dateStr": "2026-03-30",
+      "articleCount": 0,
+      "cumComment": 2561,
+      "followComment": 0,
+      "cumLike": 28541,
+      "cumFan": 22,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "跃动星球"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "jiaoiiwang(王娇)",
+      "dept": "",
+      "dateStr": "2026-03-30",
+      "articleCount": 0,
+      "cumComment": 5000,
+      "followComment": 0,
+      "cumLike": 105592,
+      "cumFan": 55,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "隐藏战线-蜗牛小姐"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "hilaryma(马逸俊)",
+      "dept": "",
+      "dateStr": "2026-03-31",
+      "articleCount": 0,
+      "cumComment": 4531,
+      "followComment": 0,
+      "cumLike": 260075,
+      "cumFan": 127,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "世界脉搏—山的那边"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "rilefsyyu(于潇潇)",
+      "dept": "",
+      "dateStr": "2026-03-31",
+      "articleCount": 156,
+      "cumComment": 5455,
+      "followComment": 247,
+      "cumLike": 353122,
+      "cumFan": 139,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "养生漫游记"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 56,
+      "newLike": 2643,
+      "newFan": 1
+    },
+    {
+      "filler": "chaoswwang(王赟菡)",
+      "dept": "",
+      "dateStr": "2026-03-31",
+      "articleCount": 150,
+      "cumComment": 5261,
+      "followComment": 118,
+      "cumLike": 415422,
+      "cumFan": 111,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "动感次元—花生了什么树"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 56,
+      "newLike": 6848,
+      "newFan": 1
+    },
+    {
+      "filler": "青岛评论运营",
+      "dept": "",
+      "dateStr": "2026-03-31",
+      "articleCount": 0,
+      "cumComment": 243010,
+      "followComment": 5856,
+      "cumLike": 115,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "司马迁的硬盘"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 4226,
+      "newLike": 3,
+      "newFan": 0
+    },
+    {
+      "filler": "lenerwang(王迅)",
+      "dept": "",
+      "dateStr": "2026-03-31",
+      "articleCount": 150,
+      "cumComment": 4970,
+      "followComment": 14,
+      "cumLike": 58825,
+      "cumFan": 98,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "房探长"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 60,
+      "newLike": 443,
+      "newFan": 1
+    },
+    {
+      "filler": "未指定",
+      "dept": "",
+      "dateStr": "2026-03-31",
+      "articleCount": 0,
+      "cumComment": 209727,
+      "followComment": 5104,
+      "cumLike": 225,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "打油诗人孔乙己"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 2109,
+      "newLike": 4,
+      "newFan": 0
+    },
+    {
+      "filler": "王娇",
+      "dept": "",
+      "dateStr": "2026-03-31",
+      "articleCount": 0,
+      "cumComment": 152,
+      "followComment": 0,
+      "cumLike": 169,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "挽联先生"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 15,
+      "newFan": 0
+    },
+    {
+      "filler": "truchenzhang(张若琛)",
+      "dept": "",
+      "dateStr": "2026-03-31",
+      "articleCount": 0,
+      "cumComment": 4881,
+      "followComment": 0,
+      "cumLike": 71093,
+      "cumFan": 229,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "方向盘诗人"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "billlzhang(张淇)",
+      "dept": "",
+      "dateStr": "2026-03-31",
+      "articleCount": 150,
+      "cumComment": 4634,
+      "followComment": 50,
+      "cumLike": 83500,
+      "cumFan": 39,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "社会观察眼"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 66,
+      "newLike": 3260,
+      "newFan": 0
+    },
+    {
+      "filler": "bubblewang(王世浩)",
+      "dept": "",
+      "dateStr": "2026-03-31",
+      "articleCount": 0,
+      "cumComment": 2561,
+      "followComment": 0,
+      "cumLike": 28541,
+      "cumFan": 22,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "跃动星球"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "马逸俊",
+      "dept": "",
+      "dateStr": "2026-03-31",
+      "articleCount": 0,
+      "cumComment": 151,
+      "followComment": 0,
+      "cumLike": 97,
+      "cumFan": 0,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "边角料小百科"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 0,
+      "newLike": 0,
+      "newFan": 0
+    },
+    {
+      "filler": "jiaoiiwang(王娇)",
+      "dept": "",
+      "dateStr": "2026-03-31",
+      "articleCount": 150,
+      "cumComment": 5060,
+      "followComment": 77,
+      "cumLike": 108741,
+      "cumFan": 56,
+      "attribution": "",
+      "project": "新闻-垂类运营",
+      "accounts": [
+        "隐藏战线-蜗牛小姐"
+      ],
+      "fillTime": "",
+      "dataSource": "账号追踪表",
+      "newComment": 60,
+      "newLike": 3149,
+      "newFan": 1
+    },
     {
       "filler": "yunsun(孙子渊)",
       "dept": "Q5组",
@@ -20,7 +2640,8 @@
       "fillTime": "2026/04/03 13:53:19",
       "newComment": 5154,
       "newLike": 211791,
-      "newFan": 229
+      "newFan": 229,
+      "dataSource": "工作量提报"
     },
     {
       "filler": "yunsun(孙子渊)",
@@ -39,7 +2660,8 @@
       "fillTime": "2026/04/03 13:54:52",
       "newComment": 68,
       "newLike": 2100,
-      "newFan": 3
+      "newFan": 3,
+      "dataSource": "工作量提报"
     }
   ]
 }
