@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-04-03T07:53:28.311Z",
+  "updatedAt": "2026-04-03T07:57:58.162Z",
   "source": "评论运营数据（工作量提报 + 账号追踪表）",
-  "recordCount": 133,
+  "recordCount": 109,
   "data": [
     {
       "filler": "chaoswwang(王赟菡)",
@@ -24,26 +24,6 @@
       "newFan": 101
     },
     {
-      "filler": "青岛评论运营",
-      "dept": "",
-      "dateStr": "2026-03-20",
-      "articleCount": 0,
-      "cumComment": 209188,
-      "followComment": 5387,
-      "cumLike": 100,
-      "cumFan": 0,
-      "attribution": "",
-      "project": "新闻-垂类运营",
-      "accounts": [
-        "司马迁的硬盘"
-      ],
-      "fillTime": "",
-      "dataSource": "账号追踪表",
-      "newComment": 209188,
-      "newLike": 100,
-      "newFan": 0
-    },
-    {
       "filler": "lenerwang(王迅)",
       "dept": "",
       "dateStr": "2026-03-20",
@@ -62,26 +42,6 @@
       "newComment": 4452,
       "newLike": 54382,
       "newFan": 90
-    },
-    {
-      "filler": "未指定",
-      "dept": "",
-      "dateStr": "2026-03-20",
-      "articleCount": 0,
-      "cumComment": 185434,
-      "followComment": 4621,
-      "cumLike": 204,
-      "cumFan": 0,
-      "attribution": "",
-      "project": "新闻-垂类运营",
-      "accounts": [
-        "打油诗人孔乙己"
-      ],
-      "fillTime": "",
-      "dataSource": "账号追踪表",
-      "newComment": 185434,
-      "newLike": 204,
-      "newFan": 0
     },
     {
       "filler": "王娇",
@@ -224,26 +184,6 @@
       "newFan": 0
     },
     {
-      "filler": "青岛评论运营",
-      "dept": "",
-      "dateStr": "2026-03-21",
-      "articleCount": 0,
-      "cumComment": 214024,
-      "followComment": 5468,
-      "cumLike": 103,
-      "cumFan": 0,
-      "attribution": "",
-      "project": "新闻-垂类运营",
-      "accounts": [
-        "司马迁的硬盘"
-      ],
-      "fillTime": "",
-      "dataSource": "账号追踪表",
-      "newComment": 4836,
-      "newLike": 3,
-      "newFan": 0
-    },
-    {
       "filler": "lenerwang(王迅)",
       "dept": "",
       "dateStr": "2026-03-21",
@@ -262,26 +202,6 @@
       "newComment": 63,
       "newLike": 817,
       "newFan": 3
-    },
-    {
-      "filler": "未指定",
-      "dept": "",
-      "dateStr": "2026-03-21",
-      "articleCount": 0,
-      "cumComment": 189806,
-      "followComment": 4694,
-      "cumLike": 208,
-      "cumFan": 0,
-      "attribution": "",
-      "project": "新闻-垂类运营",
-      "accounts": [
-        "打油诗人孔乙己"
-      ],
-      "fillTime": "",
-      "dataSource": "账号追踪表",
-      "newComment": 4372,
-      "newLike": 4,
-      "newFan": 0
     },
     {
       "filler": "王娇",
@@ -424,26 +344,6 @@
       "newFan": 3
     },
     {
-      "filler": "青岛评论运营",
-      "dept": "",
-      "dateStr": "2026-03-22",
-      "articleCount": 0,
-      "cumComment": 218538,
-      "followComment": 5539,
-      "cumLike": 105,
-      "cumFan": 0,
-      "attribution": "",
-      "project": "新闻-垂类运营",
-      "accounts": [
-        "司马迁的硬盘"
-      ],
-      "fillTime": "",
-      "dataSource": "账号追踪表",
-      "newComment": 4514,
-      "newLike": 2,
-      "newFan": 0
-    },
-    {
       "filler": "lenerwang(王迅)",
       "dept": "",
       "dateStr": "2026-03-22",
@@ -461,26 +361,6 @@
       "dataSource": "账号追踪表",
       "newComment": 70,
       "newLike": 537,
-      "newFan": 0
-    },
-    {
-      "filler": "未指定",
-      "dept": "",
-      "dateStr": "2026-03-22",
-      "articleCount": 0,
-      "cumComment": 189806,
-      "followComment": 4694,
-      "cumLike": 208,
-      "cumFan": 0,
-      "attribution": "",
-      "project": "新闻-垂类运营",
-      "accounts": [
-        "打油诗人孔乙己"
-      ],
-      "fillTime": "",
-      "dataSource": "账号追踪表",
-      "newComment": 0,
-      "newLike": 0,
       "newFan": 0
     },
     {
@@ -644,26 +524,6 @@
       "newFan": 2
     },
     {
-      "filler": "青岛评论运营",
-      "dept": "",
-      "dateStr": "2026-03-23",
-      "articleCount": 0,
-      "cumComment": 218538,
-      "followComment": 5539,
-      "cumLike": 105,
-      "cumFan": 0,
-      "attribution": "",
-      "project": "新闻-垂类运营",
-      "accounts": [
-        "司马迁的硬盘"
-      ],
-      "fillTime": "",
-      "dataSource": "账号追踪表",
-      "newComment": 0,
-      "newLike": 0,
-      "newFan": 0
-    },
-    {
       "filler": "lenerwang(王迅)",
       "dept": "",
       "dateStr": "2026-03-23",
@@ -682,26 +542,6 @@
       "newComment": 70,
       "newLike": 419,
       "newFan": 1
-    },
-    {
-      "filler": "未指定",
-      "dept": "",
-      "dateStr": "2026-03-23",
-      "articleCount": 0,
-      "cumComment": 193610,
-      "followComment": 4775,
-      "cumLike": 210,
-      "cumFan": 0,
-      "attribution": "",
-      "project": "新闻-垂类运营",
-      "accounts": [
-        "打油诗人孔乙己"
-      ],
-      "fillTime": "",
-      "dataSource": "账号追踪表",
-      "newComment": 3804,
-      "newLike": 2,
-      "newFan": 0
     },
     {
       "filler": "王娇",
@@ -864,26 +704,6 @@
       "newFan": 2
     },
     {
-      "filler": "青岛评论运营",
-      "dept": "",
-      "dateStr": "2026-03-24",
-      "articleCount": 0,
-      "cumComment": 218538,
-      "followComment": 5539,
-      "cumLike": 105,
-      "cumFan": 0,
-      "attribution": "",
-      "project": "新闻-垂类运营",
-      "accounts": [
-        "司马迁的硬盘"
-      ],
-      "fillTime": "",
-      "dataSource": "账号追踪表",
-      "newComment": 0,
-      "newLike": 0,
-      "newFan": 0
-    },
-    {
       "filler": "lenerwang(王迅)",
       "dept": "",
       "dateStr": "2026-03-24",
@@ -901,26 +721,6 @@
       "dataSource": "账号追踪表",
       "newComment": 55,
       "newLike": 192,
-      "newFan": 0
-    },
-    {
-      "filler": "未指定",
-      "dept": "",
-      "dateStr": "2026-03-24",
-      "articleCount": 0,
-      "cumComment": 196026,
-      "followComment": 4835,
-      "cumLike": 212,
-      "cumFan": 0,
-      "attribution": "",
-      "project": "新闻-垂类运营",
-      "accounts": [
-        "打油诗人孔乙己"
-      ],
-      "fillTime": "",
-      "dataSource": "账号追踪表",
-      "newComment": 2416,
-      "newLike": 2,
       "newFan": 0
     },
     {
@@ -1084,26 +884,6 @@
       "newFan": 0
     },
     {
-      "filler": "青岛评论运营",
-      "dept": "",
-      "dateStr": "2026-03-25",
-      "articleCount": 0,
-      "cumComment": 218538,
-      "followComment": 5539,
-      "cumLike": 105,
-      "cumFan": 0,
-      "attribution": "",
-      "project": "新闻-垂类运营",
-      "accounts": [
-        "司马迁的硬盘"
-      ],
-      "fillTime": "",
-      "dataSource": "账号追踪表",
-      "newComment": 0,
-      "newLike": 0,
-      "newFan": 0
-    },
-    {
       "filler": "lenerwang(王迅)",
       "dept": "",
       "dateStr": "2026-03-25",
@@ -1121,26 +901,6 @@
       "dataSource": "账号追踪表",
       "newComment": 0,
       "newLike": 0,
-      "newFan": 0
-    },
-    {
-      "filler": "未指定",
-      "dept": "",
-      "dateStr": "2026-03-25",
-      "articleCount": 0,
-      "cumComment": 199792,
-      "followComment": 4900,
-      "cumLike": 215,
-      "cumFan": 0,
-      "attribution": "",
-      "project": "新闻-垂类运营",
-      "accounts": [
-        "打油诗人孔乙己"
-      ],
-      "fillTime": "",
-      "dataSource": "账号追踪表",
-      "newComment": 3766,
-      "newLike": 3,
       "newFan": 0
     },
     {
@@ -1304,26 +1064,6 @@
       "newFan": 0
     },
     {
-      "filler": "青岛评论运营",
-      "dept": "",
-      "dateStr": "2026-03-26",
-      "articleCount": 0,
-      "cumComment": 224700,
-      "followComment": 5604,
-      "cumLike": 108,
-      "cumFan": 0,
-      "attribution": "",
-      "project": "新闻-垂类运营",
-      "accounts": [
-        "司马迁的硬盘"
-      ],
-      "fillTime": "",
-      "dataSource": "账号追踪表",
-      "newComment": 6162,
-      "newLike": 3,
-      "newFan": 0
-    },
-    {
       "filler": "lenerwang(王迅)",
       "dept": "",
       "dateStr": "2026-03-26",
@@ -1341,26 +1081,6 @@
       "dataSource": "账号追踪表",
       "newComment": 0,
       "newLike": 0,
-      "newFan": 0
-    },
-    {
-      "filler": "未指定",
-      "dept": "",
-      "dateStr": "2026-03-26",
-      "articleCount": 0,
-      "cumComment": 201486,
-      "followComment": 4931,
-      "cumLike": 217,
-      "cumFan": 0,
-      "attribution": "",
-      "project": "新闻-垂类运营",
-      "accounts": [
-        "打油诗人孔乙己"
-      ],
-      "fillTime": "",
-      "dataSource": "账号追踪表",
-      "newComment": 1694,
-      "newLike": 2,
       "newFan": 0
     },
     {
@@ -1544,26 +1264,6 @@
       "newFan": 2
     },
     {
-      "filler": "青岛评论运营",
-      "dept": "",
-      "dateStr": "2026-03-27",
-      "articleCount": 0,
-      "cumComment": 230100,
-      "followComment": 5671,
-      "cumLike": 112,
-      "cumFan": 0,
-      "attribution": "",
-      "project": "新闻-垂类运营",
-      "accounts": [
-        "司马迁的硬盘"
-      ],
-      "fillTime": "",
-      "dataSource": "账号追踪表",
-      "newComment": 5400,
-      "newLike": 4,
-      "newFan": 0
-    },
-    {
       "filler": "lenerwang(王迅)",
       "dept": "",
       "dateStr": "2026-03-27",
@@ -1582,26 +1282,6 @@
       "newComment": 50,
       "newLike": 1058,
       "newFan": 1
-    },
-    {
-      "filler": "未指定",
-      "dept": "",
-      "dateStr": "2026-03-27",
-      "articleCount": 0,
-      "cumComment": 204089,
-      "followComment": 4993,
-      "cumLike": 220,
-      "cumFan": 0,
-      "attribution": "",
-      "project": "新闻-垂类运营",
-      "accounts": [
-        "打油诗人孔乙己"
-      ],
-      "fillTime": "",
-      "dataSource": "账号追踪表",
-      "newComment": 2603,
-      "newLike": 3,
-      "newFan": 0
     },
     {
       "filler": "王娇",
@@ -1784,26 +1464,6 @@
       "newFan": 0
     },
     {
-      "filler": "青岛评论运营",
-      "dept": "",
-      "dateStr": "2026-03-28",
-      "articleCount": 0,
-      "cumComment": 234173,
-      "followComment": 5732,
-      "cumLike": 112,
-      "cumFan": 0,
-      "attribution": "",
-      "project": "新闻-垂类运营",
-      "accounts": [
-        "司马迁的硬盘"
-      ],
-      "fillTime": "",
-      "dataSource": "账号追踪表",
-      "newComment": 4073,
-      "newLike": 0,
-      "newFan": 0
-    },
-    {
       "filler": "lenerwang(王迅)",
       "dept": "",
       "dateStr": "2026-03-28",
@@ -1821,26 +1481,6 @@
       "dataSource": "账号追踪表",
       "newComment": 45,
       "newLike": 303,
-      "newFan": 0
-    },
-    {
-      "filler": "未指定",
-      "dept": "",
-      "dateStr": "2026-03-28",
-      "articleCount": 0,
-      "cumComment": 204089,
-      "followComment": 4993,
-      "cumLike": 220,
-      "cumFan": 0,
-      "attribution": "",
-      "project": "新闻-垂类运营",
-      "accounts": [
-        "打油诗人孔乙己"
-      ],
-      "fillTime": "",
-      "dataSource": "账号追踪表",
-      "newComment": 0,
-      "newLike": 0,
       "newFan": 0
     },
     {
@@ -2004,26 +1644,6 @@
       "newFan": 0
     },
     {
-      "filler": "青岛评论运营",
-      "dept": "",
-      "dateStr": "2026-03-29",
-      "articleCount": 0,
-      "cumComment": 238784,
-      "followComment": 5795,
-      "cumLike": 112,
-      "cumFan": 0,
-      "attribution": "",
-      "project": "新闻-垂类运营",
-      "accounts": [
-        "司马迁的硬盘"
-      ],
-      "fillTime": "",
-      "dataSource": "账号追踪表",
-      "newComment": 4611,
-      "newLike": 0,
-      "newFan": 0
-    },
-    {
       "filler": "lenerwang(王迅)",
       "dept": "",
       "dateStr": "2026-03-29",
@@ -2042,26 +1662,6 @@
       "newComment": 50,
       "newLike": 473,
       "newFan": 1
-    },
-    {
-      "filler": "未指定",
-      "dept": "",
-      "dateStr": "2026-03-29",
-      "articleCount": 0,
-      "cumComment": 204089,
-      "followComment": 4993,
-      "cumLike": 220,
-      "cumFan": 0,
-      "attribution": "",
-      "project": "新闻-垂类运营",
-      "accounts": [
-        "打油诗人孔乙己"
-      ],
-      "fillTime": "",
-      "dataSource": "账号追踪表",
-      "newComment": 0,
-      "newLike": 0,
-      "newFan": 0
     },
     {
       "filler": "truchenzhang(张若琛)",
@@ -2224,26 +1824,6 @@
       "newFan": 0
     },
     {
-      "filler": "青岛评论运营",
-      "dept": "",
-      "dateStr": "2026-03-30",
-      "articleCount": 0,
-      "cumComment": 238784,
-      "followComment": 5795,
-      "cumLike": 112,
-      "cumFan": 0,
-      "attribution": "",
-      "project": "新闻-垂类运营",
-      "accounts": [
-        "司马迁的硬盘"
-      ],
-      "fillTime": "",
-      "dataSource": "账号追踪表",
-      "newComment": 0,
-      "newLike": 0,
-      "newFan": 0
-    },
-    {
       "filler": "lenerwang(王迅)",
       "dept": "",
       "dateStr": "2026-03-30",
@@ -2262,26 +1842,6 @@
       "newComment": 55,
       "newLike": 201,
       "newFan": 1
-    },
-    {
-      "filler": "未指定",
-      "dept": "",
-      "dateStr": "2026-03-30",
-      "articleCount": 0,
-      "cumComment": 207618,
-      "followComment": 5048,
-      "cumLike": 221,
-      "cumFan": 0,
-      "attribution": "",
-      "project": "新闻-垂类运营",
-      "accounts": [
-        "打油诗人孔乙己"
-      ],
-      "fillTime": "",
-      "dataSource": "账号追踪表",
-      "newComment": 3529,
-      "newLike": 1,
-      "newFan": 0
     },
     {
       "filler": "王娇",
@@ -2444,26 +2004,6 @@
       "newFan": 1
     },
     {
-      "filler": "青岛评论运营",
-      "dept": "",
-      "dateStr": "2026-03-31",
-      "articleCount": 0,
-      "cumComment": 243010,
-      "followComment": 5856,
-      "cumLike": 115,
-      "cumFan": 0,
-      "attribution": "",
-      "project": "新闻-垂类运营",
-      "accounts": [
-        "司马迁的硬盘"
-      ],
-      "fillTime": "",
-      "dataSource": "账号追踪表",
-      "newComment": 4226,
-      "newLike": 3,
-      "newFan": 0
-    },
-    {
       "filler": "lenerwang(王迅)",
       "dept": "",
       "dateStr": "2026-03-31",
@@ -2482,26 +2022,6 @@
       "newComment": 60,
       "newLike": 443,
       "newFan": 1
-    },
-    {
-      "filler": "未指定",
-      "dept": "",
-      "dateStr": "2026-03-31",
-      "articleCount": 0,
-      "cumComment": 209727,
-      "followComment": 5104,
-      "cumLike": 225,
-      "cumFan": 0,
-      "attribution": "",
-      "project": "新闻-垂类运营",
-      "accounts": [
-        "打油诗人孔乙己"
-      ],
-      "fillTime": "",
-      "dataSource": "账号追踪表",
-      "newComment": 2109,
-      "newLike": 4,
-      "newFan": 0
     },
     {
       "filler": "王娇",

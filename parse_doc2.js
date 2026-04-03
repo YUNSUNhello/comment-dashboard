@@ -238,7 +238,7 @@ for (const acct of ACCOUNTS) {
         if (vals.length === 0) continue;
         
         rows.push({
-            filler: acct.owner || '未指定',
+            filler: acct.owner || null,
             dept: '',
             dateStr,
             articleCount: d.article || 0,
@@ -293,7 +293,10 @@ if (fs.existsSync(existingFile)) {
     } catch(e) {}
 }
 
-const allData = [...rows, ...existingData];
+// 过滤掉不需要的账号
+const EXCLUDED_FILLERS = ['青岛评论运营'];
+const filteredRows = rows.filter(r => r.filler && !EXCLUDED_FILLERS.includes(r.filler));
+const allData = [...filteredRows, ...existingData];
 allData.sort((a, b) => a.dateStr.localeCompare(b.dateStr));
 
 const output = {
